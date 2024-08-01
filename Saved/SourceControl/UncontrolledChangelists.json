@@ -1,0 +1,25 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"E:/EpicGames/UE_5.4/Project/FPS/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/5/DI/1JZHHCOBVQ2F5XRUWSES1X.uasset",
+				"E:/EpicGames/UE_5.4/Project/FPS/Content/FPWeapon/Audio/FirstPersonTemplateWeaponFire02.uasset",
+				"E:/EpicGames/UE_5.4/Project/FPS/Content/FirstPersonArms/Character/Materials/Instances/Manny/MI_Manny_01.uasset",
+				"E:/EpicGames/UE_5.4/Project/FPS/Content/ActorComponents/State/BP_HealthStamina.uasset",
+				"E:/EpicGames/UE_5.4/Project/FPS/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset",
+				"E:/EpicGames/UE_5.4/Project/FPS/Content/FirstPerson/Blueprints/BP_FirstPersonPlayerController.uasset",
+				"E:/EpicGames/UE_5.4/Project/FPS/Content/Widgets/MainHUD/WBP_MainHUD.uasset",
+				"E:/EpicGames/UE_5.4/Project/FPS/Content/Widgets/ProgressBar/WBP_ProgressBar.uasset",
+				"E:/EpicGames/UE_5.4/Project/FPS/Content/FirstPerson/Input/Actions/IA_Sprint.uasset",
+				"E:/EpicGames/UE_5.4/Project/FPS/Content/FirstPerson/Input/IMC_Default.uasset",
+				"E:/EpicGames/UE_5.4/Project/FPS/Content/FirstPerson/Input/Actions/IA_Interact.uasset",
+				"E:/EpicGames/UE_5.4/Project/FPS/Content/ActorComponents/Interact/BP_InteractComponent.uasset",
+				"E:/EpicGames/UE_5.4/Project/FPS/Content/FirstPerson/Input/Actions/IA_Action.uasset",
+				"E:/EpicGames/UE_5.4/Project/FPS/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/7/8K/0OLPBOSZCPU1X7E3PCLCGF.uasset"
+			]
+		}
+	]
+}

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\FPS.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\FPS.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\FPSEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\FPS">
+      <UniqueIdentifier>{50532BBC-C583-3744-9249-9A843E673DCF}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\FPS\FPS.Build.cs">
+      <Filter>Source\FPS</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\FPS\FPS.cpp">
+      <Filter>Source\FPS</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FPS\FPS.h">
+      <Filter>Source\FPS</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\FPS\FPSCharacter.cpp">
+      <Filter>Source\FPS</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FPS\FPSCharacter.h">
+      <Filter>Source\FPS</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\FPS\FPSGameMode.cpp">
+      <Filter>Source\FPS</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FPS\FPSGameMode.h">
+      <Filter>Source\FPS</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\FPS\FPSPlayerController.cpp">
+      <Filter>Source\FPS</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FPS\FPSPlayerController.h">
+      <Filter>Source\FPS</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\FPS\FPSProjectile.cpp">
+      <Filter>Source\FPS</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FPS\FPSProjectile.h">
+      <Filter>Source\FPS</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\FPS\TP_PickUpComponent.cpp">
+      <Filter>Source\FPS</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FPS\TP_PickUpComponent.h">
+      <Filter>Source\FPS</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\FPS\TP_WeaponComponent.cpp">
+      <Filter>Source\FPS</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FPS\TP_WeaponComponent.h">
+      <Filter>Source\FPS</Filter>
+    </ClInclude>
+    <Filter Include="Source\FPS\Private">
+      <UniqueIdentifier>{24E7E02A-DF4F-382B-86C3-6A060148E74F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\FPS\Private\ActorComponents">
+      <UniqueIdentifier>{DC4F044C-2C42-3D50-B3F8-E5A73CA17F87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\FPS\Private\ActorComponents\Interact">
+      <UniqueIdentifier>{2791B333-581E-3AE4-95C1-C4C5C0928B10}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\ActorComponents\Interact\InteractComponent.cpp">
+      <Filter>Source\FPS\Private\ActorComponents\Interact</Filter>
+    </ClCompile>
+    <Filter Include="Source\FPS\Private\ActorComponents\State">
+      <UniqueIdentifier>{84432E39-1679-3C2B-B791-D132D62D7406}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\ActorComponents\State\HealthStaminaComponent.cpp">
+      <Filter>Source\FPS\Private\ActorComponents\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\FPS\Private\ActorComponents\State\StateMasterComponent.cpp">
+      <Filter>Source\FPS\Private\ActorComponents\State</Filter>
+    </ClCompile>
+    <Filter Include="Source\FPS\Private\Interfaces">
+      <UniqueIdentifier>{AEE2C247-8FC8-34E3-905D-B9A0A4AB1276}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\Interfaces\PlayerInteract.cpp">
+      <Filter>Source\FPS\Private\Interfaces</Filter>
+    </ClCompile>
+    <Filter Include="Source\FPS\Private\Widgets">
+      <UniqueIdentifier>{33930063-8B0C-3E6A-A83D-84AC41920443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\FPS\Private\Widgets\MainHUD">
+      <UniqueIdentifier>{7204B9C3-AA88-31D2-A1FD-7C9373557BD8}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\Widgets\MainHUD\MainHUDWidget.cpp">
+      <Filter>Source\FPS\Private\Widgets\MainHUD</Filter>
+    </ClCompile>
+    <Filter Include="Source\FPS\Private\Widgets\ProgressBar">
+      <UniqueIdentifier>{7028FF7A-AE17-37CE-BA20-BB0D8C8907C7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\Widgets\ProgressBar\ProgressBarWidget.cpp">
+      <Filter>Source\FPS\Private\Widgets\ProgressBar</Filter>
+    </ClCompile>
+    <Filter Include="Source\FPS\Public">
+      <UniqueIdentifier>{8E59584E-1C77-3CEE-86A9-63100732490B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\FPS\Public\ActorComponents">
+      <UniqueIdentifier>{59AAA302-64DF-32C6-8B82-99DA5CB8D5BD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\FPS\Public\ActorComponents\Interact">
+      <UniqueIdentifier>{9D554190-43F9-31C3-ABD4-707EE7154F94}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\Interact\InteractComponent.h">
+      <Filter>Source\FPS\Public\ActorComponents\Interact</Filter>
+    </ClInclude>
+    <Filter Include="Source\FPS\Public\ActorComponents\State">
+      <UniqueIdentifier>{36F46374-9007-3D40-AD8F-BD539CFA48C8}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\State\HealthStaminaComponent.h">
+      <Filter>Source\FPS\Public\ActorComponents\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\State\StateMasterComponent.h">
+      <Filter>Source\FPS\Public\ActorComponents\State</Filter>
+    </ClInclude>
+    <Filter Include="Source\FPS\Public\Interfaces">
+      <UniqueIdentifier>{B9533092-EBD9-3DCC-BB8E-8A74B0C742E8}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\Interfaces\PlayerInteract.h">
+      <Filter>Source\FPS\Public\Interfaces</Filter>
+    </ClInclude>
+    <Filter Include="Source\FPS\Public\Widgets">
+      <UniqueIdentifier>{ACFD97C0-6415-311B-9C39-BF28857A46A1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\FPS\Public\Widgets\MainHUD">
+      <UniqueIdentifier>{32BCE116-9DA7-3DFF-9561-49CB9979B14B}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\Widgets\MainHUD\MainHUDWidget.h">
+      <Filter>Source\FPS\Public\Widgets\MainHUD</Filter>
+    </ClInclude>
+    <Filter Include="Source\FPS\Public\Widgets\ProgressBar">
+      <UniqueIdentifier>{62868F11-0764-3978-B09A-805B169EFEF2}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\Widgets\ProgressBar\ProgressBarWidget.h">
+      <Filter>Source\FPS\Public\Widgets\ProgressBar</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

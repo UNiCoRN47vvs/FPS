@@ -1,0 +1,97 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+#include "UObject/GeneratedCppIncludes.h"
+#include "FPS/Public/ActorComponents/Interact/InteractComponent.h"
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+void EmptyLinkFunctionForGeneratedCodeInteractComponent() {}
+
+// Begin Cross Module References
+ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
+FPS_API UClass* Z_Construct_UClass_UInteractComponent();
+FPS_API UClass* Z_Construct_UClass_UInteractComponent_NoRegister();
+UPackage* Z_Construct_UPackage__Script_FPS();
+// End Cross Module References
+
+// Begin Class UInteractComponent
+void UInteractComponent::StaticRegisterNativesUInteractComponent()
+{
+}
+IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UInteractComponent);
+UClass* Z_Construct_UClass_UInteractComponent_NoRegister()
+{
+	return UInteractComponent::StaticClass();
+}
+struct Z_Construct_UClass_UInteractComponent_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+		{ "BlueprintSpawnableComponent", "" },
+		{ "BlueprintType", "true" },
+		{ "ClassGroupNames", "Custom" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//-----------------------------------------------------------------------------------------------------------\n" },
+#endif
+		{ "IncludePath", "ActorComponents/Interact/InteractComponent.h" },
+		{ "IsBlueprintBase", "true" },
+		{ "ModuleRelativePath", "Public/ActorComponents/Interact/InteractComponent.h" },
+	};
+#endif // WITH_METADATA
+	static UObject* (*const DependentSingletons[])();
+	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
+		TCppClassTypeTraits<UInteractComponent>::IsAbstract,
+	};
+	static const UECodeGen_Private::FClassParams ClassParams;
+};
+UObject* (*const Z_Construct_UClass_UInteractComponent_Statics::DependentSingletons[])() = {
+	(UObject* (*)())Z_Construct_UClass_UActorComponent,
+	(UObject* (*)())Z_Construct_UPackage__Script_FPS,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UInteractComponent_Statics::DependentSingletons) < 16);
+const UECodeGen_Private::FClassParams Z_Construct_UClass_UInteractComponent_Statics::ClassParams = {
+	&UInteractComponent::StaticClass,
+	"Engine",
+	&StaticCppClassTypeInfo,
+	DependentSingletons,
+	nullptr,
+	nullptr,
+	nullptr,
+	UE_ARRAY_COUNT(DependentSingletons),
+	0,
+	0,
+	0,
+	0x00B000A4u,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UInteractComponent_Statics::Class_MetaDataParams), Z_Construct_UClass_UInteractComponent_Statics::Class_MetaDataParams)
+};
+UClass* Z_Construct_UClass_UInteractComponent()
+{
+	if (!Z_Registration_Info_UClass_UInteractComponent.OuterSingleton)
+	{
+		UECodeGen_Private::ConstructUClass(Z_Registration_Info_UClass_UInteractComponent.OuterSingleton, Z_Construct_UClass_UInteractComponent_Statics::ClassParams);
+	}
+	return Z_Registration_Info_UClass_UInteractComponent.OuterSingleton;
+}
+template<> FPS_API UClass* StaticClass<UInteractComponent>()
+{
+	return UInteractComponent::StaticClass();
+}
+DEFINE_VTABLE_PTR_HELPER_CTOR(UInteractComponent);
+UInteractComponent::~UInteractComponent() {}
+// End Class UInteractComponent
+
+// Begin Registration
+struct Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Interact_InteractComponent_h_Statics
+{
+	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
+		{ Z_Construct_UClass_UInteractComponent, UInteractComponent::StaticClass, TEXT("UInteractComponent"), &Z_Registration_Info_UClass_UInteractComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInteractComponent), 384413389U) },
+	};
+};
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Interact_InteractComponent_h_1657125064(TEXT("/Script/FPS"),
+	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Interact_InteractComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Interact_InteractComponent_h_Statics::ClassInfo),
+	nullptr, 0,
+	nullptr, 0);
+// End Registration
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

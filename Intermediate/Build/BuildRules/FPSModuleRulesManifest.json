@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\EpicGames\\UE_5.4\\Project\\FPS\\Source\\FPS\\FPS.Build.cs",
+		"E:\\EpicGames\\UE_5.4\\Project\\FPS\\Source\\FPS.Target.cs",
+		"E:\\EpicGames\\UE_5.4\\Project\\FPS\\Source\\FPSEditor.Target.cs"
+	],
+	"EngineVersion": "5.4.3"
+}
