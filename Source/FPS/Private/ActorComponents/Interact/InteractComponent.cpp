@@ -5,6 +5,7 @@
 #include "TimerManager.h"
 #include "Camera/CameraComponent.h"
 #include "FPS/FPSCharacter.h"
+#include "Interfaces/ItemInteract.h"
 //-----------------------------------------------------------------------------------------------------------
 UInteractComponent::UInteractComponent()
 {
@@ -36,6 +37,12 @@ void UInteractComponent::SetInteractLine(bool bTurnOn)
 	}
 }
 //-----------------------------------------------------------------------------------------------------------
+//Getter
+AActor* UInteractComponent::GetTargetActor()
+{
+	return TargetActor;
+}
+//-----------------------------------------------------------------------------------------------------------
 void UInteractComponent::LineTraceCall()
 {
 	if (!CameraComponent || !PlayerCharacter)
@@ -59,5 +66,24 @@ void UInteractComponent::LineTraceCall()
 	FVector LocalEndLocation = CameraComponent->GetForwardVector() * 220.0 + LocalStartLocation;
 
 	GetWorld()->LineTraceSingleByChannel(LocalHitResult, LocalStartLocation, LocalEndLocation, ECollisionChannel::ECC_Visibility);
-	//DrawDebugLine(GetWorld(), LocalStartLocation, LocalEndLocation, FColor::Red, false, 1, 0, 1);
+	DrawDebugLine(GetWorld(), LocalStartLocation, LocalEndLocation, FColor::Red, false, 0.3, 0, 0.1);
+	
+	TargetActor = LocalHitResult.GetActor();
+	if (TargetActor)
+	{
+		IItemInteract* LocalItemInteract = Cast<IItemInteract>(TargetActor);
+		if (LocalItemInteract)
+		{
+			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, LocalItemInteract->GetItemInfo());
+		}
+		else
+		{
+			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InteractComponent, LocalItemInteract = nullptr!")));
+		}
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InteractComponent, TargetActor = nullptr!")));
+	}
+
 }

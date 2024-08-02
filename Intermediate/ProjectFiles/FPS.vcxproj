@@ -252,6 +252,8 @@
     <None Include="..\..\FPS.uproject"/>
     <None Include="..\..\Source\FPS.Target.cs"/>
     <None Include="..\..\Source\FPSEditor.Target.cs"/>
+    <None Include="..\..\.gitattributes"/>
+    <None Include="..\..\.gitignore"/>
     <None Include="..\..\.vsconfig"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
@@ -296,7 +298,19 @@
     <ClCompile Include="..\..\Source\FPS\Private\ActorComponents\State\StateMasterComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\FPS\Private\Interfaces\ItemInteract.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\Interfaces\PlayerInteract.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\FPS\Private\Items\ItemMaster.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\FPS\Private\Items\Weapons\WeaponMaster.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\FPS\Private\Structures\ItemStructMaster.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\Widgets\MainHUD\MainHUDWidget.cpp">
@@ -308,7 +322,11 @@
     <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\Interact\InteractComponent.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\State\HealthStaminaComponent.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\State\StateMasterComponent.h"/>
+    <ClInclude Include="..\..\Source\FPS\Public\Interfaces\ItemInteract.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Interfaces\PlayerInteract.h"/>
+    <ClInclude Include="..\..\Source\FPS\Public\Items\ItemMaster.h"/>
+    <ClInclude Include="..\..\Source\FPS\Public\Items\Weapons\WeaponMaster.h"/>
+    <ClInclude Include="..\..\Source\FPS\Public\Structures\ItemStructMaster.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\MainHUD\MainHUDWidget.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\ProgressBar\ProgressBarWidget.h"/>
   </ItemGroup>

@@ -60,8 +60,6 @@ protected:
 	class UInputAction* LookAction;
 private:
 	void Sprint();
-	UFUNCTION(BlueprintCallable)
-	void TestFunc();
 
 	double StandartSpeed;
 	UCharacterMovementComponent* CharacterMovement;

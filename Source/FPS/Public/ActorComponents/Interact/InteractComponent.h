@@ -16,6 +16,7 @@ public:
 	UInteractComponent();
 
 	void SetInteractLine(bool bTurnOn);
+	AActor* GetTargetActor();
 
 protected:
 	virtual void BeginPlay() override;
@@ -27,6 +28,7 @@ private:
 	AFPSCharacter* PlayerCharacter;
 	UCameraComponent* CameraComponent;
 	FTimerHandle LineTraceTimer;
+	AActor* TargetActor;
 
 		
 };

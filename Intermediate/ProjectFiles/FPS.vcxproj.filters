@@ -11,6 +11,8 @@
     <None Include="..\..\Source\FPSEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
@@ -102,8 +104,29 @@
     <Filter Include="Source\FPS\Private\Interfaces">
       <UniqueIdentifier>{AEE2C247-8FC8-34E3-905D-B9A0A4AB1276}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\Interfaces\ItemInteract.cpp">
+      <Filter>Source\FPS\Private\Interfaces</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\Interfaces\PlayerInteract.cpp">
       <Filter>Source\FPS\Private\Interfaces</Filter>
+    </ClCompile>
+    <Filter Include="Source\FPS\Private\Items">
+      <UniqueIdentifier>{E7201741-9D1C-39A8-9248-D14C20280DAC}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\Items\ItemMaster.cpp">
+      <Filter>Source\FPS\Private\Items</Filter>
+    </ClCompile>
+    <Filter Include="Source\FPS\Private\Items\Weapons">
+      <UniqueIdentifier>{1C74B0E7-1EBB-3183-9050-12FDEB32C859}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\Items\Weapons\WeaponMaster.cpp">
+      <Filter>Source\FPS\Private\Items\Weapons</Filter>
+    </ClCompile>
+    <Filter Include="Source\FPS\Private\Structures">
+      <UniqueIdentifier>{AE90DBF3-5C26-38BD-A9FA-266005E9277C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\Structures\ItemStructMaster.cpp">
+      <Filter>Source\FPS\Private\Structures</Filter>
     </ClCompile>
     <Filter Include="Source\FPS\Private\Widgets">
       <UniqueIdentifier>{33930063-8B0C-3E6A-A83D-84AC41920443}</UniqueIdentifier>
@@ -144,8 +167,29 @@
     <Filter Include="Source\FPS\Public\Interfaces">
       <UniqueIdentifier>{B9533092-EBD9-3DCC-BB8E-8A74B0C742E8}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\Interfaces\ItemInteract.h">
+      <Filter>Source\FPS\Public\Interfaces</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\FPS\Public\Interfaces\PlayerInteract.h">
       <Filter>Source\FPS\Public\Interfaces</Filter>
+    </ClInclude>
+    <Filter Include="Source\FPS\Public\Items">
+      <UniqueIdentifier>{F0FC32D3-F510-3236-A76A-C7ADA3B92FF7}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\Items\ItemMaster.h">
+      <Filter>Source\FPS\Public\Items</Filter>
+    </ClInclude>
+    <Filter Include="Source\FPS\Public\Items\Weapons">
+      <UniqueIdentifier>{B0477062-234B-3860-9004-30DEF5A720DA}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\Items\Weapons\WeaponMaster.h">
+      <Filter>Source\FPS\Public\Items\Weapons</Filter>
+    </ClInclude>
+    <Filter Include="Source\FPS\Public\Structures">
+      <UniqueIdentifier>{01A63A7A-4E5E-3D2A-B17A-763F977905AA}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\Structures\ItemStructMaster.h">
+      <Filter>Source\FPS\Public\Structures</Filter>
     </ClInclude>
     <Filter Include="Source\FPS\Public\Widgets">
       <UniqueIdentifier>{ACFD97C0-6415-311B-9C39-BF28857A46A1}</UniqueIdentifier>

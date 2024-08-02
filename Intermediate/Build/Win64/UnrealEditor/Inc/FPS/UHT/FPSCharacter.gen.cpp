@@ -73,43 +73,9 @@ void FChangeSprint_DelegateWrapper(const FMulticastScriptDelegate& ChangeSprint,
 }
 // End Delegate FChangeSprint
 
-// Begin Class AFPSCharacter Function TestFunc
-struct Z_Construct_UFunction_AFPSCharacter_TestFunc_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "FPSCharacter.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AFPSCharacter_TestFunc_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSCharacter, nullptr, "TestFunc", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AFPSCharacter_TestFunc_Statics::Function_MetaDataParams), Z_Construct_UFunction_AFPSCharacter_TestFunc_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_AFPSCharacter_TestFunc()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AFPSCharacter_TestFunc_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(AFPSCharacter::execTestFunc)
-{
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->TestFunc();
-	P_NATIVE_END;
-}
-// End Class AFPSCharacter Function TestFunc
-
 // Begin Class AFPSCharacter
 void AFPSCharacter::StaticRegisterNativesAFPSCharacter()
 {
-	UClass* Class = AFPSCharacter::StaticClass();
-	static const FNameNativePtrPair Funcs[] = {
-		{ "TestFunc", &AFPSCharacter::execTestFunc },
-	};
-	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AFPSCharacter);
 UClass* Z_Construct_UClass_AFPSCharacter_NoRegister()
@@ -179,10 +145,6 @@ struct Z_Construct_UClass_AFPSCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LookAction;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
-	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_AFPSCharacter_TestFunc, "TestFunc" }, // 1403652364
-	};
-	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AFPSCharacter>::IsAbstract,
@@ -219,11 +181,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AFPSCharacter_Statics::
 	"Game",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	FuncInfo,
+	nullptr,
 	Z_Construct_UClass_AFPSCharacter_Statics::PropPointers,
 	InterfaceParams,
 	UE_ARRAY_COUNT(DependentSingletons),
-	UE_ARRAY_COUNT(FuncInfo),
+	0,
 	UE_ARRAY_COUNT(Z_Construct_UClass_AFPSCharacter_Statics::PropPointers),
 	UE_ARRAY_COUNT(InterfaceParams),
 	0x008000A4u,
@@ -249,10 +211,10 @@ AFPSCharacter::~AFPSCharacter() {}
 struct Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_FPSCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AFPSCharacter, AFPSCharacter::StaticClass, TEXT("AFPSCharacter"), &Z_Registration_Info_UClass_AFPSCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AFPSCharacter), 2927978697U) },
+		{ Z_Construct_UClass_AFPSCharacter, AFPSCharacter::StaticClass, TEXT("AFPSCharacter"), &Z_Registration_Info_UClass_AFPSCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AFPSCharacter), 1127489845U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_FPSCharacter_h_2362510484(TEXT("/Script/FPS"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_FPSCharacter_h_502385810(TEXT("/Script/FPS"),
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_FPSCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_FPSCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -18,10 +18,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 FPS_API void FChangeSprint_DelegateWrapper(const FMulticastScriptDelegate& ChangeSprint, bool bStart);
 
 
-#define FID_Project_FPS_Source_FPS_FPSCharacter_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execTestFunc);
-
-
 #define FID_Project_FPS_Source_FPS_FPSCharacter_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFPSCharacter(); \
@@ -48,7 +44,6 @@ public: \
 #define FID_Project_FPS_Source_FPS_FPSCharacter_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Project_FPS_Source_FPS_FPSCharacter_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Project_FPS_Source_FPS_FPSCharacter_h_23_INCLASS_NO_PURE_DECLS \
 	FID_Project_FPS_Source_FPS_FPSCharacter_h_23_ENHANCED_CONSTRUCTORS \
 private: \

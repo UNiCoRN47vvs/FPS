@@ -35,6 +35,7 @@ AFPSCharacter::AFPSCharacter()
 }
 //-----------------------------------------------------------------------------------------------------------
 //Interfaces
+//true if begin overlap, fasle if end overlap
 void AFPSCharacter::InteractPlayerWithItem(bool bTurnOn)
 {
 	if (!InteractComponent)
@@ -144,7 +145,3 @@ void AFPSCharacter::StopSprint()
 	OnChangeSprint.Broadcast(false);
 }
 //-----------------------------------------------------------------------------------------------------------
-void AFPSCharacter::TestFunc()
-{
-	InteractPlayerWithItem(true);
-}
