@@ -8,10 +8,14 @@ struct FPS_API FItemStructMaster
 {
 	GENERATED_BODY()
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct Master")
 	FName ItemName;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct Master")
 	FText ItemDesc;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct Master")
 	TSoftObjectPtr<UTexture2D> ItemIcon;
-	TSoftObjectPtr<UStaticMesh> ItemStaticMesh;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct Master")
+	TSoftObjectPtr<USkeletalMesh> ItemStaticMesh;
 
 };
 //-----------------------------------------------------------------------------------------------------------
