@@ -37,7 +37,7 @@ void AItemMaster::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 }
 void AItemMaster::OnOverlapEnd(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
-	if (!OtherActor)
+	if (!OtherActor || !OtherActor->Implements<IPlayerInteract>())
 		return;
 
 	IPlayerInteract* LocalPlayerInterface = Cast<IPlayerInteract>(OtherActor);
