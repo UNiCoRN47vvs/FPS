@@ -45,7 +45,7 @@ void AItemMaster::OnOverlapEnd(class UPrimitiveComponent* OverlappedComponent, c
 }
 //-----------------------------------------------------------------------------------------------------------
 //Getter
-FString AItemMaster::GetItemInfo()
+FItemStructMaster AItemMaster::GetItemInfo()
 {
-	return TestString;
+	return ItemInfo;
 }

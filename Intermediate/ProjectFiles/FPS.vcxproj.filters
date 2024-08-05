@@ -128,15 +128,15 @@
     <ClCompile Include="..\..\Source\FPS\Private\Items\Weapons\WeaponMaster.cpp">
       <Filter>Source\FPS\Private\Items\Weapons</Filter>
     </ClCompile>
-    <Filter Include="Source\FPS\Private\Structures">
-      <UniqueIdentifier>{AE90DBF3-5C26-38BD-A9FA-266005E9277C}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\FPS\Private\Structures\ItemStructMaster.cpp">
-      <Filter>Source\FPS\Private\Structures</Filter>
-    </ClCompile>
     <Filter Include="Source\FPS\Private\Widgets">
       <UniqueIdentifier>{33930063-8B0C-3E6A-A83D-84AC41920443}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\FPS\Private\Widgets\Interact">
+      <UniqueIdentifier>{CB877B70-4A3D-3126-B417-4BA449D92B9C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\Widgets\Interact\InfoInteractWidget.cpp">
+      <Filter>Source\FPS\Private\Widgets\Interact</Filter>
+    </ClCompile>
     <Filter Include="Source\FPS\Private\Widgets\MainHUD">
       <UniqueIdentifier>{7204B9C3-AA88-31D2-A1FD-7C9373557BD8}</UniqueIdentifier>
     </Filter>
@@ -197,15 +197,15 @@
     <ClInclude Include="..\..\Source\FPS\Public\Items\Weapons\WeaponMaster.h">
       <Filter>Source\FPS\Public\Items\Weapons</Filter>
     </ClInclude>
-    <Filter Include="Source\FPS\Public\Structures">
-      <UniqueIdentifier>{01A63A7A-4E5E-3D2A-B17A-763F977905AA}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\FPS\Public\Structures\ItemStructMaster.h">
-      <Filter>Source\FPS\Public\Structures</Filter>
-    </ClInclude>
     <Filter Include="Source\FPS\Public\Widgets">
       <UniqueIdentifier>{ACFD97C0-6415-311B-9C39-BF28857A46A1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\FPS\Public\Widgets\Interact">
+      <UniqueIdentifier>{6BC1F5D3-C3B5-3D03-B801-481CE135FED3}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\Widgets\Interact\InfoInteractWidget.h">
+      <Filter>Source\FPS\Public\Widgets\Interact</Filter>
+    </ClInclude>
     <Filter Include="Source\FPS\Public\Widgets\MainHUD">
       <UniqueIdentifier>{32BCE116-9DA7-3DFF-9561-49CB9979B14B}</UniqueIdentifier>
     </Filter>

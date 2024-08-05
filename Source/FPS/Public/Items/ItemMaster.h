@@ -4,8 +4,20 @@
 #include "GameFramework/Actor.h"
 #include "Components/SphereComponent.h"
 #include "Interfaces/ItemInteract.h"
-#include "Structures/ItemStructMaster.h"
 #include "ItemMaster.generated.h"
+//-----------------------------------------------------------------------------------------------------------
+USTRUCT(BlueprintType)
+struct FItemStructMaster
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct")
+	FName ItemName;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct")
+	FText ItemDesc;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct")
+	TSoftObjectPtr<UTexture2D> ItemIcon;
+};
 //-----------------------------------------------------------------------------------------------------------
 UCLASS()
 class FPS_API AItemMaster : public AActor , public IItemInteract
@@ -14,10 +26,7 @@ class FPS_API AItemMaster : public AActor , public IItemInteract
 	
 public:	
 	AItemMaster();
-	virtual FString GetItemInfo() override;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Master")
-	FString TestString;
+	virtual FItemStructMaster GetItemInfo() override;
 
 protected:
 	virtual void BeginPlay() override;

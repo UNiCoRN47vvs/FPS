@@ -14,7 +14,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FPS_SuppliesMaster_generated_h
 
-#define FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_10_INCLASS_NO_PURE_DECLS \
+#define FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_10_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FItemSuppliesMaster_Statics; \
+	FPS_API static class UScriptStruct* StaticStruct();
+
+
+template<> FPS_API UScriptStruct* StaticStruct<struct FItemSuppliesMaster>();
+
+#define FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASuppliesMaster(); \
 	friend struct Z_Construct_UClass_ASuppliesMaster_Statics; \
@@ -23,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ASuppliesMaster)
 
 
-#define FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_10_ENHANCED_CONSTRUCTORS \
+#define FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ASuppliesMaster(ASuppliesMaster&&); \
@@ -35,12 +42,12 @@ public: \
 	NO_API virtual ~ASuppliesMaster();
 
 
-#define FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_7_PROLOG
-#define FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_10_GENERATED_BODY \
+#define FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_17_PROLOG
+#define FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_10_INCLASS_NO_PURE_DECLS \
-	FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_10_ENHANCED_CONSTRUCTORS \
+	FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_20_INCLASS_NO_PURE_DECLS \
+	FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

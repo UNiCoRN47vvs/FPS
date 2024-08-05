@@ -313,7 +313,7 @@
     <ClCompile Include="..\..\Source\FPS\Private\Items\Weapons\WeaponMaster.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="..\..\Source\FPS\Private\Structures\ItemStructMaster.cpp">
+    <ClCompile Include="..\..\Source\FPS\Private\Widgets\Interact\InfoInteractWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\Widgets\MainHUD\MainHUDWidget.cpp">
@@ -330,7 +330,7 @@
     <ClInclude Include="..\..\Source\FPS\Public\Items\ItemMaster.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Items\Supplies\SuppliesMaster.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Items\Weapons\WeaponMaster.h"/>
-    <ClInclude Include="..\..\Source\FPS\Public\Structures\ItemStructMaster.h"/>
+    <ClInclude Include="..\..\Source\FPS\Public\Widgets\Interact\InfoInteractWidget.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\MainHUD\MainHUDWidget.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\ProgressBar\ProgressBarWidget.h"/>
   </ItemGroup>

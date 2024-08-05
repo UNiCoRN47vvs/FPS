@@ -4,6 +4,8 @@
 #include "UObject/Interface.h"
 #include "ItemInteract.generated.h"
 //-----------------------------------------------------------------------------------------------------------
+struct FItemStructMaster;
+//-----------------------------------------------------------------------------------------------------------
 UINTERFACE(MinimalAPI)
 class UItemInteract : public UInterface
 {
@@ -15,6 +17,6 @@ class FPS_API IItemInteract
 	GENERATED_BODY()
 
 public:
-	virtual FString GetItemInfo() = 0;
+	virtual FItemStructMaster GetItemInfo() = 0;
 };
 //-----------------------------------------------------------------------------------------------------------

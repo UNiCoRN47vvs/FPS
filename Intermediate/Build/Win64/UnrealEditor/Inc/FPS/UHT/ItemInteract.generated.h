@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FPS_ItemInteract_generated_h
 
-#define FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_10_ENHANCED_CONSTRUCTORS \
+#define FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_12_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	FPS_API UItemInteract(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -28,7 +28,7 @@ public: \
 	FPS_API virtual ~UItemInteract();
 
 
-#define FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_10_GENERATED_UINTERFACE_BODY() \
+#define FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_12_GENERATED_UINTERFACE_BODY() \
 private: \
 	static void StaticRegisterNativesUItemInteract(); \
 	friend struct Z_Construct_UClass_UItemInteract_Statics; \
@@ -37,15 +37,15 @@ public: \
 	DECLARE_SERIALIZER(UItemInteract)
 
 
-#define FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_10_GENERATED_BODY \
+#define FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_12_GENERATED_BODY \
 	PRAGMA_DISABLE_DEPRECATION_WARNINGS \
-	FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_10_GENERATED_UINTERFACE_BODY() \
-	FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_10_ENHANCED_CONSTRUCTORS \
+	FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_12_GENERATED_UINTERFACE_BODY() \
+	FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 	PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_10_INCLASS_IINTERFACE_NO_PURE_DECLS \
+#define FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_12_INCLASS_IINTERFACE_NO_PURE_DECLS \
 protected: \
 	virtual ~IItemInteract() {} \
 public: \
@@ -54,11 +54,11 @@ public: \
 	virtual UObject* _getUObject() const { return nullptr; }
 
 
-#define FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_7_PROLOG
-#define FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_15_GENERATED_BODY \
+#define FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_9_PROLOG
+#define FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_10_INCLASS_IINTERFACE_NO_PURE_DECLS \
+	FID_Project_FPS_Source_FPS_Public_Interfaces_ItemInteract_h_12_INCLASS_IINTERFACE_NO_PURE_DECLS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

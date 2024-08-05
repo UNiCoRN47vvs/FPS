@@ -6,6 +6,8 @@
 //-----------------------------------------------------------------------------------------------------------
 class UCameraComponent;
 class AFPSCharacter;
+class UInfoInteractWidget;
+class IItemInteract;
 //-----------------------------------------------------------------------------------------------------------
 UCLASS(Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class FPS_API UInteractComponent : public UActorComponent
@@ -23,6 +25,8 @@ protected:
 
 private:
 	void LineTraceCall();
+	//При наведении создаем/удаляем инфовиджет
+	void WidgetInfo(bool bCreate, IItemInteract* ItemInteract);
 
 	int TimerCounter;
 	AFPSCharacter* PlayerCharacter;
@@ -30,6 +34,10 @@ private:
 	FTimerHandle LineTraceTimer;
 	AActor* TargetActor;
 
+	UPROPERTY(EditAnywhere, Category = "Interact Component")
+	TSubclassOf<UInfoInteractWidget> BPInteractWidget;
+
+	UInfoInteractWidget* InteractWidget;
 		
 };
 //-----------------------------------------------------------------------------------------------------------

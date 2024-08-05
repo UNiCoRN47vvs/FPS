@@ -6,6 +6,9 @@
 #include "Camera/CameraComponent.h"
 #include "FPS/FPSCharacter.h"
 #include "Interfaces/ItemInteract.h"
+#include "Blueprint/UserWidget.h"
+#include "Widgets/Interact/InfoInteractWidget.h"
+#include "Items/ItemMaster.h"
 //-----------------------------------------------------------------------------------------------------------
 UInteractComponent::UInteractComponent()
 {
@@ -67,23 +70,50 @@ void UInteractComponent::LineTraceCall()
 
 	GetWorld()->LineTraceSingleByChannel(LocalHitResult, LocalStartLocation, LocalEndLocation, ECollisionChannel::ECC_Visibility);
 	//DrawDebugLine(GetWorld(), LocalStartLocation, LocalEndLocation, FColor::Red, false, 0.3, 0, 0.1);
-	
+
 	TargetActor = LocalHitResult.GetActor();
+
 	if (TargetActor)
 	{
 		IItemInteract* LocalItemInteract = Cast<IItemInteract>(TargetActor);
 		if (LocalItemInteract)
 		{
-			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, LocalItemInteract->GetItemInfo());
+			//GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, LocalItemInteract->GetItemInfo());
+			WidgetInfo(true, LocalItemInteract);
 		}
 		else
 		{
+			WidgetInfo(false, LocalItemInteract);
 			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InteractComponent, LocalItemInteract = nullptr!")));
 		}
 	}
 	else
 	{
+		WidgetInfo(false, nullptr);
 		GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InteractComponent, TargetActor = nullptr!")));
 	}
 
+}
+//-----------------------------------------------------------------------------------------------------------
+void UInteractComponent::WidgetInfo(bool bCreate, IItemInteract* ItemInteract)
+{
+
+	if (bCreate)
+	{
+		if (InteractWidget)
+			return;
+
+		FText LocalText = FText::FromName(ItemInteract->GetItemInfo().ItemName);
+		InteractWidget = CreateWidget<UInfoInteractWidget>(GetWorld(), BPInteractWidget);
+		InteractWidget->TextBlock->SetText(LocalText);
+		InteractWidget->AddToViewport();
+	}
+	else
+	{
+		if (!InteractWidget)
+			return;
+
+		InteractWidget->RemoveFromParent();
+		InteractWidget = nullptr;
+	}
 }

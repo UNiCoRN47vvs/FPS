@@ -10,7 +10,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeInteractComponent() {}
 
 // Begin Cross Module References
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
+FPS_API UClass* Z_Construct_UClass_UInfoInteractWidget_NoRegister();
 FPS_API UClass* Z_Construct_UClass_UInteractComponent();
 FPS_API UClass* Z_Construct_UClass_UInteractComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_FPS();
@@ -39,13 +41,24 @@ struct Z_Construct_UClass_UInteractComponent_Statics
 		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Public/ActorComponents/Interact/InteractComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BPInteractWidget_MetaData[] = {
+		{ "Category", "Interact Component" },
+		{ "ModuleRelativePath", "Public/ActorComponents/Interact/InteractComponent.h" },
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FClassPropertyParams NewProp_BPInteractWidget;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UInteractComponent>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UInteractComponent_Statics::NewProp_BPInteractWidget = { "BPInteractWidget", nullptr, (EPropertyFlags)0x0044000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractComponent, BPInteractWidget), Z_Construct_UClass_UClass, Z_Construct_UClass_UInfoInteractWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BPInteractWidget_MetaData), NewProp_BPInteractWidget_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UInteractComponent_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractComponent_Statics::NewProp_BPInteractWidget,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UInteractComponent_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UInteractComponent_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UActorComponent,
 	(UObject* (*)())Z_Construct_UPackage__Script_FPS,
@@ -57,11 +70,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UInteractComponent_Stat
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	nullptr,
-	nullptr,
+	Z_Construct_UClass_UInteractComponent_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	0,
-	0,
+	UE_ARRAY_COUNT(Z_Construct_UClass_UInteractComponent_Statics::PropPointers),
 	0,
 	0x00B000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UInteractComponent_Statics::Class_MetaDataParams), Z_Construct_UClass_UInteractComponent_Statics::Class_MetaDataParams)
@@ -86,10 +99,10 @@ UInteractComponent::~UInteractComponent() {}
 struct Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Interact_InteractComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UInteractComponent, UInteractComponent::StaticClass, TEXT("UInteractComponent"), &Z_Registration_Info_UClass_UInteractComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInteractComponent), 384413389U) },
+		{ Z_Construct_UClass_UInteractComponent, UInteractComponent::StaticClass, TEXT("UInteractComponent"), &Z_Registration_Info_UClass_UInteractComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInteractComponent), 2113733096U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Interact_InteractComponent_h_1657125064(TEXT("/Script/FPS"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Interact_InteractComponent_h_1652945949(TEXT("/Script/FPS"),
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Interact_InteractComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Interact_InteractComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
