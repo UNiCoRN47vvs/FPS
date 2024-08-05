@@ -6,12 +6,9 @@ AItemMaster::AItemMaster()
 	PrimaryActorTick.bCanEverTick = true;
 
 	ItemScene = CreateDefaultSubobject<USceneComponent>(TEXT("Item Scene Component"));
-	ItemStaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Item Statick Mesh Component"));
 	ItemSphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("Item Sphere Component"));
 
 	ItemScene->SetupAttachment(RootComponent);
-	ItemStaticMesh->SetupAttachment(ItemScene);
-	ItemSphereComponent->SetupAttachment(ItemStaticMesh);
 
 	ItemSphereComponent->InitSphereRadius(170.0);
 }
@@ -37,7 +34,7 @@ void AItemMaster::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 }
 void AItemMaster::OnOverlapEnd(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
-	if (!OtherActor || !OtherActor->Implements<IPlayerInteract>())
+	if (!OtherActor || !OtherActor->GetClass()->ImplementsInterface(UPlayerInteract::StaticClass()))
 		return;
 
 	IPlayerInteract* LocalPlayerInterface = Cast<IPlayerInteract>(OtherActor);

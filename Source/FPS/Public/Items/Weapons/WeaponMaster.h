@@ -8,6 +8,13 @@ UCLASS()
 class FPS_API AWeaponMaster : public AItemMaster
 {
 	GENERATED_BODY()
+public:
+
+	AWeaponMaster();
 	
+protected:
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Weapon Master")
+	USkeletalMeshComponent* SkeletalMeshComponent;
 };
 //-----------------------------------------------------------------------------------------------------------

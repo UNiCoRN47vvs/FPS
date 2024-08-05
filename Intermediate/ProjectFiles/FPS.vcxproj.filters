@@ -116,6 +116,12 @@
     <ClCompile Include="..\..\Source\FPS\Private\Items\ItemMaster.cpp">
       <Filter>Source\FPS\Private\Items</Filter>
     </ClCompile>
+    <Filter Include="Source\FPS\Private\Items\Supplies">
+      <UniqueIdentifier>{0CA28EB0-18BC-3A71-A16E-4071089FA274}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\Items\Supplies\SuppliesMaster.cpp">
+      <Filter>Source\FPS\Private\Items\Supplies</Filter>
+    </ClCompile>
     <Filter Include="Source\FPS\Private\Items\Weapons">
       <UniqueIdentifier>{1C74B0E7-1EBB-3183-9050-12FDEB32C859}</UniqueIdentifier>
     </Filter>
@@ -178,6 +184,12 @@
     </Filter>
     <ClInclude Include="..\..\Source\FPS\Public\Items\ItemMaster.h">
       <Filter>Source\FPS\Public\Items</Filter>
+    </ClInclude>
+    <Filter Include="Source\FPS\Public\Items\Supplies">
+      <UniqueIdentifier>{9B664214-344A-392F-A781-8D4B8CF24145}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\Items\Supplies\SuppliesMaster.h">
+      <Filter>Source\FPS\Public\Items\Supplies</Filter>
     </ClInclude>
     <Filter Include="Source\FPS\Public\Items\Weapons">
       <UniqueIdentifier>{B0477062-234B-3860-9004-30DEF5A720DA}</UniqueIdentifier>

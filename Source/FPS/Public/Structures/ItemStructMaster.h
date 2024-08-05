@@ -15,7 +15,7 @@ struct FPS_API FItemStructMaster
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct Master")
 	TSoftObjectPtr<UTexture2D> ItemIcon;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct Master")
-	TSoftObjectPtr<USkeletalMesh> ItemStaticMesh;
+	TSoftObjectPtr<USkeletalMesh> ItemSkeletalMesh;
 
 };
 //-----------------------------------------------------------------------------------------------------------

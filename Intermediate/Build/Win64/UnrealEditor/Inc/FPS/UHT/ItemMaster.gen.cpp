@@ -17,7 +17,6 @@ ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
-ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 FPS_API UClass* Z_Construct_UClass_AItemMaster();
 FPS_API UClass* Z_Construct_UClass_AItemMaster_NoRegister();
@@ -199,11 +198,6 @@ struct Z_Construct_UClass_AItemMaster_Statics
 		{ "Category", "Item Master" },
 		{ "ModuleRelativePath", "Public/Items/ItemMaster.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemStaticMesh_MetaData[] = {
-		{ "Category", "Item Master" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/Items/ItemMaster.h" },
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemSphereComponent_MetaData[] = {
 		{ "Category", "Item Master" },
 		{ "EditInline", "true" },
@@ -220,7 +214,6 @@ struct Z_Construct_UClass_AItemMaster_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_TestString;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_ItemStaticMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ItemSphereComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ItemScene;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ItemInfo;
@@ -238,13 +231,11 @@ struct Z_Construct_UClass_AItemMaster_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_AItemMaster_Statics::NewProp_TestString = { "TestString", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AItemMaster, TestString), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TestString_MetaData), NewProp_TestString_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AItemMaster_Statics::NewProp_ItemStaticMesh = { "ItemStaticMesh", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AItemMaster, ItemStaticMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemStaticMesh_MetaData), NewProp_ItemStaticMesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AItemMaster_Statics::NewProp_ItemSphereComponent = { "ItemSphereComponent", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AItemMaster, ItemSphereComponent), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemSphereComponent_MetaData), NewProp_ItemSphereComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AItemMaster_Statics::NewProp_ItemScene = { "ItemScene", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AItemMaster, ItemScene), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemScene_MetaData), NewProp_ItemScene_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AItemMaster_Statics::NewProp_ItemInfo = { "ItemInfo", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AItemMaster, ItemInfo), Z_Construct_UScriptStruct_FItemStructMaster, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemInfo_MetaData), NewProp_ItemInfo_MetaData) }; // 2530034448
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AItemMaster_Statics::NewProp_ItemInfo = { "ItemInfo", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AItemMaster, ItemInfo), Z_Construct_UScriptStruct_FItemStructMaster, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemInfo_MetaData), NewProp_ItemInfo_MetaData) }; // 1162395408
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AItemMaster_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemMaster_Statics::NewProp_TestString,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemMaster_Statics::NewProp_ItemStaticMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemMaster_Statics::NewProp_ItemSphereComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemMaster_Statics::NewProp_ItemScene,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemMaster_Statics::NewProp_ItemInfo,
@@ -293,10 +284,10 @@ AItemMaster::~AItemMaster() {}
 struct Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_ItemMaster_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AItemMaster, AItemMaster::StaticClass, TEXT("AItemMaster"), &Z_Registration_Info_UClass_AItemMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AItemMaster), 723305806U) },
+		{ Z_Construct_UClass_AItemMaster, AItemMaster::StaticClass, TEXT("AItemMaster"), &Z_Registration_Info_UClass_AItemMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AItemMaster), 1913001083U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_ItemMaster_h_3771386061(TEXT("/Script/FPS"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_ItemMaster_h_2319141505(TEXT("/Script/FPS"),
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_ItemMaster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_ItemMaster_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -52,7 +52,7 @@ struct Z_Construct_UScriptStruct_FItemStructMaster_Statics
 		{ "Category", "Item Struct Master" },
 		{ "ModuleRelativePath", "Public/Structures/ItemStructMaster.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemStaticMesh_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemSkeletalMesh_MetaData[] = {
 		{ "Category", "Item Struct Master" },
 		{ "ModuleRelativePath", "Public/Structures/ItemStructMaster.h" },
 	};
@@ -60,7 +60,7 @@ struct Z_Construct_UScriptStruct_FItemStructMaster_Statics
 	static const UECodeGen_Private::FNamePropertyParams NewProp_ItemName;
 	static const UECodeGen_Private::FTextPropertyParams NewProp_ItemDesc;
 	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_ItemIcon;
-	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_ItemStaticMesh;
+	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_ItemSkeletalMesh;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static void* NewStructOps()
 	{
@@ -71,12 +71,12 @@ struct Z_Construct_UScriptStruct_FItemStructMaster_Statics
 const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemName = { "ItemName", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemStructMaster, ItemName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemName_MetaData), NewProp_ItemName_MetaData) };
 const UECodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemDesc = { "ItemDesc", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemStructMaster, ItemDesc), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemDesc_MetaData), NewProp_ItemDesc_MetaData) };
 const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemIcon = { "ItemIcon", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemStructMaster, ItemIcon), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemIcon_MetaData), NewProp_ItemIcon_MetaData) };
-const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemStaticMesh = { "ItemStaticMesh", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemStructMaster, ItemStaticMesh), Z_Construct_UClass_USkeletalMesh_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemStaticMesh_MetaData), NewProp_ItemStaticMesh_MetaData) };
+const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemSkeletalMesh = { "ItemSkeletalMesh", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemStructMaster, ItemSkeletalMesh), Z_Construct_UClass_USkeletalMesh_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemSkeletalMesh_MetaData), NewProp_ItemSkeletalMesh_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FItemStructMaster_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemName,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemDesc,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemIcon,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemStaticMesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemSkeletalMesh,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemStructMaster_Statics::PropPointers) < 2048);
 const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FItemStructMaster_Statics::StructParams = {
@@ -106,10 +106,10 @@ UScriptStruct* Z_Construct_UScriptStruct_FItemStructMaster()
 struct Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Structures_ItemStructMaster_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FItemStructMaster::StaticStruct, Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewStructOps, TEXT("ItemStructMaster"), &Z_Registration_Info_UScriptStruct_ItemStructMaster, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemStructMaster), 2530034448U) },
+		{ FItemStructMaster::StaticStruct, Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewStructOps, TEXT("ItemStructMaster"), &Z_Registration_Info_UScriptStruct_ItemStructMaster, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemStructMaster), 1162395408U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Structures_ItemStructMaster_h_466568199(TEXT("/Script/FPS"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Structures_ItemStructMaster_h_3726179594(TEXT("/Script/FPS"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Structures_ItemStructMaster_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Structures_ItemStructMaster_h_Statics::ScriptStructInfo),
 	nullptr, 0);

@@ -14,7 +14,6 @@ class FPS_API IPlayerInteract
 {
 	GENERATED_BODY()
 
-
 public:
 
 	virtual void InteractPlayerWithItem(bool bTurnOn) = 0;

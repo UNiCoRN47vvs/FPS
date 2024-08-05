@@ -66,7 +66,7 @@ void UInteractComponent::LineTraceCall()
 	FVector LocalEndLocation = CameraComponent->GetForwardVector() * 220.0 + LocalStartLocation;
 
 	GetWorld()->LineTraceSingleByChannel(LocalHitResult, LocalStartLocation, LocalEndLocation, ECollisionChannel::ECC_Visibility);
-	DrawDebugLine(GetWorld(), LocalStartLocation, LocalEndLocation, FColor::Red, false, 0.3, 0, 0.1);
+	//DrawDebugLine(GetWorld(), LocalStartLocation, LocalEndLocation, FColor::Red, false, 0.3, 0, 0.1);
 	
 	TargetActor = LocalHitResult.GetActor();
 	if (TargetActor)

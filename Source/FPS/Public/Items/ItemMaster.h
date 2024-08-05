@@ -23,8 +23,6 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Item Master")
-	UStaticMeshComponent* ItemStaticMesh;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Item Master")
 	USphereComponent* ItemSphereComponent;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Item Master")
 	USceneComponent* ItemScene;

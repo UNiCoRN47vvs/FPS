@@ -307,6 +307,9 @@
     <ClCompile Include="..\..\Source\FPS\Private\Items\ItemMaster.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\FPS\Private\Items\Supplies\SuppliesMaster.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\Items\Weapons\WeaponMaster.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -325,6 +328,7 @@
     <ClInclude Include="..\..\Source\FPS\Public\Interfaces\ItemInteract.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Interfaces\PlayerInteract.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Items\ItemMaster.h"/>
+    <ClInclude Include="..\..\Source\FPS\Public\Items\Supplies\SuppliesMaster.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Items\Weapons\WeaponMaster.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Structures\ItemStructMaster.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\MainHUD\MainHUDWidget.h"/>

@@ -24,8 +24,6 @@ public: \
 
 
 #define FID_Project_FPS_Source_FPS_Public_Items_Weapons_WeaponMaster_h_10_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AWeaponMaster(); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AWeaponMaster(AWeaponMaster&&); \
