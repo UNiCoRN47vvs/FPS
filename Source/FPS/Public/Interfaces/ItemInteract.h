@@ -4,6 +4,7 @@
 #include "UObject/Interface.h"
 #include "ItemInteract.generated.h"
 //-----------------------------------------------------------------------------------------------------------
+class AFPSCharacter;
 struct FItemStructMaster;
 //-----------------------------------------------------------------------------------------------------------
 UINTERFACE(MinimalAPI)
@@ -18,5 +19,6 @@ class FPS_API IItemInteract
 
 public:
 	virtual FItemStructMaster GetItemInfo() = 0;
+	virtual void InteractWithActor(AFPSCharacter* PlayerCharacter) = 0;
 };
 //-----------------------------------------------------------------------------------------------------------

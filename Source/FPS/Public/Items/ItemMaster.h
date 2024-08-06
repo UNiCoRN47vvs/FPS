@@ -6,6 +6,8 @@
 #include "Interfaces/ItemInteract.h"
 #include "ItemMaster.generated.h"
 //-----------------------------------------------------------------------------------------------------------
+class AFPSCharacter;
+//-----------------------------------------------------------------------------------------------------------
 USTRUCT(BlueprintType)
 struct FItemStructMaster
 {
@@ -27,6 +29,7 @@ class FPS_API AItemMaster : public AActor , public IItemInteract
 public:	
 	AItemMaster();
 	virtual FItemStructMaster GetItemInfo() override;
+	virtual void InteractWithActor(AFPSCharacter* PlayerCharacter) override;
 
 protected:
 	virtual void BeginPlay() override;

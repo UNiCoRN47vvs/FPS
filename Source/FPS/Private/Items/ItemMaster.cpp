@@ -49,3 +49,9 @@ FItemStructMaster AItemMaster::GetItemInfo()
 {
 	return ItemInfo;
 }
+//-----------------------------------------------------------------------------------------------------------
+void AItemMaster::InteractWithActor(AFPSCharacter* PlayerCharacter)
+{
+	Destroy();
+}
+//-----------------------------------------------------------------------------------------------------------

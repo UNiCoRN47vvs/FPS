@@ -11,6 +11,7 @@
 #include "Engine/LocalPlayer.h"
 #include "ActorComponents/State/HealthStaminaComponent.h"
 #include "ActorComponents/Interact/InteractComponent.h"
+#include "Interfaces/ItemInteract.h"
 //-----------------------------------------------------------------------------------------------------------
 AFPSCharacter::AFPSCharacter()
 {
@@ -67,6 +68,7 @@ void AFPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Canceled, this, &AFPSCharacter::StopSprint);
 		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Completed, this, &AFPSCharacter::StopSprint);
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AFPSCharacter::Look);
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &AFPSCharacter::Interact);
 	}
 	else
 	{
@@ -145,3 +147,23 @@ void AFPSCharacter::StopSprint()
 	OnChangeSprint.Broadcast(false);
 }
 //-----------------------------------------------------------------------------------------------------------
+void AFPSCharacter::Interact()
+{
+	AActor* LocalTarget = GetInteractComponent()->GetTargetActor();
+	if (LocalTarget && LocalTarget->GetClass()->ImplementsInterface(UItemInteract::StaticClass()))
+	{
+		IItemInteract* LocalInteractInterface = Cast<IItemInteract>(GetInteractComponent()->GetTargetActor());
+		if (LocalInteractInterface)
+		{
+			LocalInteractInterface->InteractWithActor(this);
+		}
+		else
+		{
+			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, LocalInteractInterface = nullptr!")));
+		}
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, GetInteractComponent()->GetTargetActor() = nullptr!")));
+	}
+}
