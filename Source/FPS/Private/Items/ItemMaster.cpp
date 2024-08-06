@@ -26,22 +26,35 @@ void AItemMaster::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 	if (!OtherActor)
 		return;
 
-	IPlayerInteract* LocalPlayerInterface = Cast<IPlayerInteract>(OtherActor);
-	if (LocalPlayerInterface)
+	if (!PlayerInterface)
 	{
-		LocalPlayerInterface->InteractPlayerWithItem(true);
+		PlayerInterface = Cast<IPlayerInteract>(OtherActor);
+		if (!PlayerInterface)
+		{
+			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, PlayerInterface = nullptr!")));
+			return;
+		}
 	}
+
+	PlayerInterface->InteractPlayerWithItem(true);
+	
 }
 void AItemMaster::OnOverlapEnd(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
 	if (!OtherActor || !OtherActor->GetClass()->ImplementsInterface(UPlayerInteract::StaticClass()))
 		return;
 
-	IPlayerInteract* LocalPlayerInterface = Cast<IPlayerInteract>(OtherActor);
-	if (LocalPlayerInterface)
+	if (!PlayerInterface)
 	{
-		LocalPlayerInterface->InteractPlayerWithItem(false);
+		PlayerInterface = Cast<IPlayerInteract>(OtherActor);
+		if (!PlayerInterface)
+		{
+			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, PlayerInterface = nullptr!")));
+			return;
+		}
 	}
+
+	PlayerInterface->InteractPlayerWithItem(false);
 }
 //-----------------------------------------------------------------------------------------------------------
 //Getter
@@ -52,6 +65,12 @@ FItemStructMaster AItemMaster::GetItemInfo()
 //-----------------------------------------------------------------------------------------------------------
 void AItemMaster::InteractWithActor(AFPSCharacter* PlayerCharacter)
 {
+	if (PlayerInterface)
+	{
+	}
+	else
+		GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, PlayerInterface = nullptr!")));
+
 	Destroy();
 }
 //-----------------------------------------------------------------------------------------------------------

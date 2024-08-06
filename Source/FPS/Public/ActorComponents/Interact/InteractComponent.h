@@ -23,12 +23,13 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
+	UPROPERTY(BlueprintReadOnly)
+	int TimerCounter;
 private:
 	void LineTraceCall();
 	//При наведении создаем/удаляем инфовиджет
 	void WidgetInfo(bool bCreate, IItemInteract* ItemInteract);
 
-	int TimerCounter;
 	AFPSCharacter* PlayerCharacter;
 	UCameraComponent* CameraComponent;
 	FTimerHandle LineTraceTimer;

@@ -6,6 +6,7 @@
 #include "Interfaces/ItemInteract.h"
 #include "ItemMaster.generated.h"
 //-----------------------------------------------------------------------------------------------------------
+class IPlayerInteract;
 class AFPSCharacter;
 //-----------------------------------------------------------------------------------------------------------
 USTRUCT(BlueprintType)
@@ -40,6 +41,8 @@ protected:
 	USceneComponent* ItemScene;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Master")
 	FItemStructMaster ItemInfo;
+
+	IPlayerInteract* PlayerInterface;
 
 private:
 	UFUNCTION()

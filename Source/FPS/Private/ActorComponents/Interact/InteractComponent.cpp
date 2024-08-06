@@ -37,6 +37,9 @@ void UInteractComponent::SetInteractLine(bool bTurnOn)
 			return;
 
 		GetWorld()->GetTimerManager().ClearTimer(LineTraceTimer);
+
+		if (InteractWidget)
+			InteractWidget->RemoveFromParent();
 	}
 }
 //-----------------------------------------------------------------------------------------------------------
