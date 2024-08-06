@@ -43,11 +43,16 @@ struct Z_Construct_UScriptStruct_FItemWeaponMaster_Statics
 #endif
 		{ "ModuleRelativePath", "Public/Items/Weapons/WeaponMaster.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Damage_MetaData[] = {
+		{ "Category", "Item Struct" },
+		{ "ModuleRelativePath", "Public/Items/Weapons/WeaponMaster.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SkeletalMesh_MetaData[] = {
 		{ "Category", "Item Struct" },
 		{ "ModuleRelativePath", "Public/Items/Weapons/WeaponMaster.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FDoublePropertyParams NewProp_Damage;
 	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_SkeletalMesh;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static void* NewStructOps()
@@ -56,8 +61,10 @@ struct Z_Construct_UScriptStruct_FItemWeaponMaster_Statics
 	}
 	static const UECodeGen_Private::FStructParams StructParams;
 };
+const UECodeGen_Private::FDoublePropertyParams Z_Construct_UScriptStruct_FItemWeaponMaster_Statics::NewProp_Damage = { "Damage", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemWeaponMaster, Damage), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Damage_MetaData), NewProp_Damage_MetaData) };
 const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FItemWeaponMaster_Statics::NewProp_SkeletalMesh = { "SkeletalMesh", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemWeaponMaster, SkeletalMesh), Z_Construct_UClass_USkeletalMesh_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SkeletalMesh_MetaData), NewProp_SkeletalMesh_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FItemWeaponMaster_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemWeaponMaster_Statics::NewProp_Damage,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemWeaponMaster_Statics::NewProp_SkeletalMesh,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemWeaponMaster_Statics::PropPointers) < 2048);
@@ -123,7 +130,7 @@ struct Z_Construct_UClass_AWeaponMaster_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeaponMaster_Statics::NewProp_SkeletalMeshComponent = { "SkeletalMeshComponent", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWeaponMaster, SkeletalMeshComponent), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SkeletalMeshComponent_MetaData), NewProp_SkeletalMeshComponent_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AWeaponMaster_Statics::NewProp_ItemWeaponInfo = { "ItemWeaponInfo", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWeaponMaster, ItemWeaponInfo), Z_Construct_UScriptStruct_FItemWeaponMaster, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemWeaponInfo_MetaData), NewProp_ItemWeaponInfo_MetaData) }; // 3082446049
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AWeaponMaster_Statics::NewProp_ItemWeaponInfo = { "ItemWeaponInfo", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWeaponMaster, ItemWeaponInfo), Z_Construct_UScriptStruct_FItemWeaponMaster, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemWeaponInfo_MetaData), NewProp_ItemWeaponInfo_MetaData) }; // 2456423325
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWeaponMaster_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponMaster_Statics::NewProp_SkeletalMeshComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponMaster_Statics::NewProp_ItemWeaponInfo,
@@ -169,13 +176,13 @@ AWeaponMaster::~AWeaponMaster() {}
 struct Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_Weapons_WeaponMaster_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FItemWeaponMaster::StaticStruct, Z_Construct_UScriptStruct_FItemWeaponMaster_Statics::NewStructOps, TEXT("ItemWeaponMaster"), &Z_Registration_Info_UScriptStruct_ItemWeaponMaster, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemWeaponMaster), 3082446049U) },
+		{ FItemWeaponMaster::StaticStruct, Z_Construct_UScriptStruct_FItemWeaponMaster_Statics::NewStructOps, TEXT("ItemWeaponMaster"), &Z_Registration_Info_UScriptStruct_ItemWeaponMaster, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemWeaponMaster), 2456423325U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWeaponMaster, AWeaponMaster::StaticClass, TEXT("AWeaponMaster"), &Z_Registration_Info_UClass_AWeaponMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWeaponMaster), 1838889314U) },
+		{ Z_Construct_UClass_AWeaponMaster, AWeaponMaster::StaticClass, TEXT("AWeaponMaster"), &Z_Registration_Info_UClass_AWeaponMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWeaponMaster), 3109585160U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_Weapons_WeaponMaster_h_3294393225(TEXT("/Script/FPS"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_Weapons_WeaponMaster_h_3681570090(TEXT("/Script/FPS"),
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_Weapons_WeaponMaster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_Weapons_WeaponMaster_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_Weapons_WeaponMaster_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_Weapons_WeaponMaster_h_Statics::ScriptStructInfo),
 	nullptr, 0);

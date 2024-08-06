@@ -92,6 +92,12 @@
     <ClCompile Include="..\..\Source\FPS\Private\ActorComponents\Interact\InteractComponent.cpp">
       <Filter>Source\FPS\Private\ActorComponents\Interact</Filter>
     </ClCompile>
+    <Filter Include="Source\FPS\Private\ActorComponents\Inventory">
+      <UniqueIdentifier>{CE2EC8EB-C9D0-3830-8F15-283D333E8D3C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\ActorComponents\Inventory\InventoryComponent.cpp">
+      <Filter>Source\FPS\Private\ActorComponents\Inventory</Filter>
+    </ClCompile>
     <Filter Include="Source\FPS\Private\ActorComponents\State">
       <UniqueIdentifier>{84432E39-1679-3C2B-B791-D132D62D7406}</UniqueIdentifier>
     </Filter>
@@ -160,6 +166,12 @@
     </Filter>
     <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\Interact\InteractComponent.h">
       <Filter>Source\FPS\Public\ActorComponents\Interact</Filter>
+    </ClInclude>
+    <Filter Include="Source\FPS\Public\ActorComponents\Inventory">
+      <UniqueIdentifier>{DA46681A-0834-3D99-B552-8B29E6D00959}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\Inventory\InventoryComponent.h">
+      <Filter>Source\FPS\Public\ActorComponents\Inventory</Filter>
     </ClInclude>
     <Filter Include="Source\FPS\Public\ActorComponents\State">
       <UniqueIdentifier>{36F46374-9007-3D40-AD8F-BD539CFA48C8}</UniqueIdentifier>

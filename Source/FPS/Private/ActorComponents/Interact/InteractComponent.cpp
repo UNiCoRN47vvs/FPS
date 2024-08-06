@@ -55,16 +55,13 @@ void UInteractComponent::LineTraceCall()
 	{
 		PlayerCharacter = Cast<AFPSCharacter>(GetOwner());
 		if (!PlayerCharacter)
-		{
-			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InteractComponent, PlayerCharacter = nullptr!")));
-			return;
-		}
+			return GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InteractComponent, PlayerCharacter = nullptr!")));
+
 		CameraComponent = PlayerCharacter->GetCameraComponent();
+
 		if(!CameraComponent)
-		{
-			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InteractComponent, CameraComponent = nullptr!")));
-			return;
-		}
+			return GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InteractComponent, CameraComponent = nullptr!")));
+
 	}
 
 	FHitResult LocalHitResult;

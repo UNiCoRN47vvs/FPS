@@ -49,6 +49,18 @@ struct Z_Construct_UScriptStruct_FItemStructMaster_Statics
 #endif
 		{ "ModuleRelativePath", "Public/Items/ItemMaster.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemCount_MetaData[] = {
+		{ "Category", "Item Struct" },
+		{ "ModuleRelativePath", "Public/Items/ItemMaster.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemCountMax_MetaData[] = {
+		{ "Category", "Item Struct" },
+		{ "ModuleRelativePath", "Public/Items/ItemMaster.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemWeight_MetaData[] = {
+		{ "Category", "Item Struct" },
+		{ "ModuleRelativePath", "Public/Items/ItemMaster.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemName_MetaData[] = {
 		{ "Category", "Item Struct" },
 		{ "ModuleRelativePath", "Public/Items/ItemMaster.h" },
@@ -61,10 +73,18 @@ struct Z_Construct_UScriptStruct_FItemStructMaster_Statics
 		{ "Category", "Item Struct" },
 		{ "ModuleRelativePath", "Public/Items/ItemMaster.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemClass_MetaData[] = {
+		{ "Category", "Item Struct" },
+		{ "ModuleRelativePath", "Public/Items/ItemMaster.h" },
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_ItemCount;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_ItemCountMax;
+	static const UECodeGen_Private::FDoublePropertyParams NewProp_ItemWeight;
 	static const UECodeGen_Private::FNamePropertyParams NewProp_ItemName;
 	static const UECodeGen_Private::FTextPropertyParams NewProp_ItemDesc;
 	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_ItemIcon;
+	static const UECodeGen_Private::FSoftClassPropertyParams NewProp_ItemClass;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static void* NewStructOps()
 	{
@@ -72,13 +92,21 @@ struct Z_Construct_UScriptStruct_FItemStructMaster_Statics
 	}
 	static const UECodeGen_Private::FStructParams StructParams;
 };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemCount = { "ItemCount", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemStructMaster, ItemCount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemCount_MetaData), NewProp_ItemCount_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemCountMax = { "ItemCountMax", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemStructMaster, ItemCountMax), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemCountMax_MetaData), NewProp_ItemCountMax_MetaData) };
+const UECodeGen_Private::FDoublePropertyParams Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemWeight = { "ItemWeight", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemStructMaster, ItemWeight), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemWeight_MetaData), NewProp_ItemWeight_MetaData) };
 const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemName = { "ItemName", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemStructMaster, ItemName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemName_MetaData), NewProp_ItemName_MetaData) };
 const UECodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemDesc = { "ItemDesc", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemStructMaster, ItemDesc), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemDesc_MetaData), NewProp_ItemDesc_MetaData) };
 const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemIcon = { "ItemIcon", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemStructMaster, ItemIcon), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemIcon_MetaData), NewProp_ItemIcon_MetaData) };
+const UECodeGen_Private::FSoftClassPropertyParams Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemClass = { "ItemClass", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::SoftClass, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemStructMaster, ItemClass), Z_Construct_UClass_AItemMaster_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemClass_MetaData), NewProp_ItemClass_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FItemStructMaster_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemCount,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemCountMax,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemWeight,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemName,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemDesc,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemIcon,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewProp_ItemClass,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemStructMaster_Statics::PropPointers) < 2048);
 const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FItemStructMaster_Statics::StructParams = {
@@ -306,7 +334,7 @@ struct Z_Construct_UClass_AItemMaster_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AItemMaster_Statics::NewProp_ItemSphereComponent = { "ItemSphereComponent", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AItemMaster, ItemSphereComponent), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemSphereComponent_MetaData), NewProp_ItemSphereComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AItemMaster_Statics::NewProp_ItemScene = { "ItemScene", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AItemMaster, ItemScene), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemScene_MetaData), NewProp_ItemScene_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AItemMaster_Statics::NewProp_ItemInfo = { "ItemInfo", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AItemMaster, ItemInfo), Z_Construct_UScriptStruct_FItemStructMaster, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemInfo_MetaData), NewProp_ItemInfo_MetaData) }; // 3057577344
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AItemMaster_Statics::NewProp_ItemInfo = { "ItemInfo", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AItemMaster, ItemInfo), Z_Construct_UScriptStruct_FItemStructMaster, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemInfo_MetaData), NewProp_ItemInfo_MetaData) }; // 586854725
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AItemMaster_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemMaster_Statics::NewProp_ItemSphereComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemMaster_Statics::NewProp_ItemScene,
@@ -356,13 +384,13 @@ AItemMaster::~AItemMaster() {}
 struct Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_ItemMaster_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FItemStructMaster::StaticStruct, Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewStructOps, TEXT("ItemStructMaster"), &Z_Registration_Info_UScriptStruct_ItemStructMaster, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemStructMaster), 3057577344U) },
+		{ FItemStructMaster::StaticStruct, Z_Construct_UScriptStruct_FItemStructMaster_Statics::NewStructOps, TEXT("ItemStructMaster"), &Z_Registration_Info_UScriptStruct_ItemStructMaster, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemStructMaster), 586854725U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AItemMaster, AItemMaster::StaticClass, TEXT("AItemMaster"), &Z_Registration_Info_UClass_AItemMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AItemMaster), 3141220402U) },
+		{ Z_Construct_UClass_AItemMaster, AItemMaster::StaticClass, TEXT("AItemMaster"), &Z_Registration_Info_UClass_AItemMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AItemMaster), 164219193U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_ItemMaster_h_3347650835(TEXT("/Script/FPS"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_ItemMaster_h_2366359412(TEXT("/Script/FPS"),
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_ItemMaster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_ItemMaster_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_ItemMaster_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_ItemMaster_h_Statics::ScriptStructInfo),
 	nullptr, 0);

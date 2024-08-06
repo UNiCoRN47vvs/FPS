@@ -24,3 +24,11 @@ void AWeaponMaster::BeginPlay()
 	}
 }
 //-----------------------------------------------------------------------------------------------------------
+void AWeaponMaster::InteractWithActor(AFPSCharacter* PlayerCharacter)
+{
+	Super::InteractWithActor(PlayerCharacter);
+	if (!PlayerCharacter)
+		return GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, PlayerInterface = nullptr!")));
+
+	Destroy();
+}

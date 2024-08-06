@@ -14,12 +14,13 @@ struct FItemStructMaster
 {
 	GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct")
-	FName ItemName;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct")
-	FText ItemDesc;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct")
-	TSoftObjectPtr<UTexture2D> ItemIcon;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct")	int ItemCount;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct")	int ItemCountMax;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct") double ItemWeight;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct")	FName ItemName;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct")	FText ItemDesc;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct")	TSoftObjectPtr<UTexture2D> ItemIcon;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Struct")	TSoftClassPtr<AItemMaster> ItemClass;
 };
 //-----------------------------------------------------------------------------------------------------------
 UCLASS()
@@ -35,20 +36,15 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Item Master")
-	USphereComponent* ItemSphereComponent;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Item Master")
-	USceneComponent* ItemScene;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Master")
-	FItemStructMaster ItemInfo;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Item Master")	USphereComponent* ItemSphereComponent;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Item Master")	USceneComponent* ItemScene;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item Master")	FItemStructMaster ItemInfo;
 
 	IPlayerInteract* PlayerInterface;
 
 private:
-	UFUNCTION()
-	void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-	UFUNCTION()
-	void OnOverlapEnd(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	UFUNCTION()	void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	UFUNCTION()	void OnOverlapEnd(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
 };
 //-----------------------------------------------------------------------------------------------------------

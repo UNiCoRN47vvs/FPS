@@ -11,6 +11,7 @@
 #include "Engine/LocalPlayer.h"
 #include "ActorComponents/State/HealthStaminaComponent.h"
 #include "ActorComponents/Interact/InteractComponent.h"
+#include "ActorComponents/Inventory/InventoryComponent.h"
 #include "Interfaces/ItemInteract.h"
 //-----------------------------------------------------------------------------------------------------------
 AFPSCharacter::AFPSCharacter()
@@ -43,10 +44,7 @@ void AFPSCharacter::InteractPlayerWithItem(bool bTurnOn)
 	{
 		InteractComponent = GetInteractComponent();
 		if (!InteractComponent)
-		{
-			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, InteractComponent = nullptr!")));
-			return;
-		}
+			return GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, InteractComponent = nullptr!")));
 	}
 
 	InteractComponent->SetInteractLine(bTurnOn);
@@ -71,9 +69,7 @@ void AFPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &AFPSCharacter::Interact);
 	}
 	else
-	{
 		GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, EnhancedInputComponent = nullptr!")));
-	}
 }
 //-----------------------------------------------------------------------------------------------------------
 void AFPSCharacter::Move(const FInputActionValue& Value)
@@ -111,6 +107,10 @@ UCameraComponent* AFPSCharacter::GetCameraComponent()
 {
 	return FirstPersonCameraComponent;
 }
+UInventoryComponent* AFPSCharacter::GetInventoryComponent()
+{
+	return FindComponentByClass<UInventoryComponent>();
+}
 //-----------------------------------------------------------------------------------------------------------
 //Sprint
 void AFPSCharacter::Sprint()
@@ -120,10 +120,7 @@ void AFPSCharacter::Sprint()
 		HealthStaminaComponent = this->GetHealthStaminaComponent();
 		CharacterMovement = this->GetCharacterMovement();
 		if (!CharacterMovement || !HealthStaminaComponent)
-		{
-			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, CharacterMovement or HealthStaminaComponent = nullptr!")));
-			return;
-		}
+			return GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, CharacterMovement or HealthStaminaComponent = nullptr!")));
 	}
 
 	if (HealthStaminaComponent->GetStateMapElem(EStateName::Stamina) <= 10)
@@ -154,16 +151,10 @@ void AFPSCharacter::Interact()
 	{
 		IItemInteract* LocalInteractInterface = Cast<IItemInteract>(GetInteractComponent()->GetTargetActor());
 		if (LocalInteractInterface)
-		{
 			LocalInteractInterface->InteractWithActor(this);
-		}
 		else
-		{
 			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, LocalInteractInterface = nullptr!")));
-		}
 	}
 	else
-	{
 		GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, GetInteractComponent()->GetTargetActor() = nullptr!")));
-	}
 }
