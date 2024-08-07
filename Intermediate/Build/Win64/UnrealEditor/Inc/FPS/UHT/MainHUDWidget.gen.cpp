@@ -10,6 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMainHUDWidget() {}
 
 // Begin Cross Module References
+FPS_API UClass* Z_Construct_UClass_UInventoryWidget_NoRegister();
 FPS_API UClass* Z_Construct_UClass_UMainHUDWidget();
 FPS_API UClass* Z_Construct_UClass_UMainHUDWidget_NoRegister();
 FPS_API UClass* Z_Construct_UClass_UProgressBarWidget_NoRegister();
@@ -109,9 +110,16 @@ struct Z_Construct_UClass_UMainHUDWidget_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Widgets/MainHUD/MainHUDWidget.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WBPInventory_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "Main HUD Widget" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Widgets/MainHUD/MainHUDWidget.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_WBPHealth;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_WBPStamina;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_WBPInventory;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -125,9 +133,11 @@ struct Z_Construct_UClass_UMainHUDWidget_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMainHUDWidget_Statics::NewProp_WBPHealth = { "WBPHealth", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMainHUDWidget, WBPHealth), Z_Construct_UClass_UProgressBarWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WBPHealth_MetaData), NewProp_WBPHealth_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMainHUDWidget_Statics::NewProp_WBPStamina = { "WBPStamina", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMainHUDWidget, WBPStamina), Z_Construct_UClass_UProgressBarWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WBPStamina_MetaData), NewProp_WBPStamina_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMainHUDWidget_Statics::NewProp_WBPInventory = { "WBPInventory", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMainHUDWidget, WBPInventory), Z_Construct_UClass_UInventoryWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WBPInventory_MetaData), NewProp_WBPInventory_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UMainHUDWidget_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainHUDWidget_Statics::NewProp_WBPHealth,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainHUDWidget_Statics::NewProp_WBPStamina,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainHUDWidget_Statics::NewProp_WBPInventory,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UMainHUDWidget_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UMainHUDWidget_Statics::DependentSingletons[])() = {
@@ -171,10 +181,10 @@ UMainHUDWidget::~UMainHUDWidget() {}
 struct Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UMainHUDWidget, UMainHUDWidget::StaticClass, TEXT("UMainHUDWidget"), &Z_Registration_Info_UClass_UMainHUDWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMainHUDWidget), 3982081761U) },
+		{ Z_Construct_UClass_UMainHUDWidget, UMainHUDWidget::StaticClass, TEXT("UMainHUDWidget"), &Z_Registration_Info_UClass_UMainHUDWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMainHUDWidget), 249278694U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_1039808338(TEXT("/Script/FPS"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_1859677874(TEXT("/Script/FPS"),
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

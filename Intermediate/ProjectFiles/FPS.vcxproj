@@ -319,6 +319,9 @@
     <ClCompile Include="..\..\Source\FPS\Private\Widgets\Interact\InfoInteractWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\FPS\Private\Widgets\Inventory\InventorySlotWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\Widgets\Inventory\InventoryWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -338,6 +341,7 @@
     <ClInclude Include="..\..\Source\FPS\Public\Items\Supplies\SuppliesMaster.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Items\Weapons\WeaponMaster.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\Interact\InfoInteractWidget.h"/>
+    <ClInclude Include="..\..\Source\FPS\Public\Widgets\Inventory\InventorySlotWidget.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\Inventory\InventoryWidget.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\MainHUD\MainHUDWidget.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\ProgressBar\ProgressBarWidget.h"/>

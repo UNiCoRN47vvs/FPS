@@ -15,11 +15,11 @@ enum class EStateName : uint8;
 #endif
 #define FPS_MainHUDWidget_generated_h
 
-#define FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execUpdateProgressBar);
 
 
-#define FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUMainHUDWidget(); \
 	friend struct Z_Construct_UClass_UMainHUDWidget_Statics; \
@@ -28,7 +28,7 @@ public: \
 	DECLARE_SERIALIZER(UMainHUDWidget)
 
 
-#define FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_14_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UMainHUDWidget(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -42,13 +42,13 @@ public: \
 	NO_API virtual ~UMainHUDWidget();
 
 
-#define FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_10_PROLOG
-#define FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_13_GENERATED_BODY \
+#define FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_11_PROLOG
+#define FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_13_INCLASS_NO_PURE_DECLS \
-	FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_13_ENHANCED_CONSTRUCTORS \
+	FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_14_INCLASS_NO_PURE_DECLS \
+	FID_Project_FPS_Source_FPS_Public_Widgets_MainHUD_MainHUDWidget_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

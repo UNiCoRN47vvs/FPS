@@ -6,6 +6,7 @@
 #include "MainHUDWidget.generated.h"
 //-----------------------------------------------------------------------------------------------------------
 class UProgressBarWidget;
+class UInventoryWidget;
 //-----------------------------------------------------------------------------------------------------------
 UCLASS()
 class FPS_API UMainHUDWidget : public UUserWidget
@@ -13,13 +14,12 @@ class FPS_API UMainHUDWidget : public UUserWidget
 	GENERATED_BODY()
 	
 public:
-	UPROPERTY(BlueprintReadOnly, Category = "Main HUD Widget", meta = (BindWidget))
-	UProgressBarWidget* WBPHealth;
-	UPROPERTY(BlueprintReadOnly, Category = "Main HUD Widget", meta = (BindWidget))
-	UProgressBarWidget* WBPStamina;
+	UPROPERTY(BlueprintReadOnly, Category = "Main HUD Widget", meta = (BindWidget)) UProgressBarWidget* WBPHealth;
+	UPROPERTY(BlueprintReadOnly, Category = "Main HUD Widget", meta = (BindWidget)) UProgressBarWidget* WBPStamina;
+	UPROPERTY(BlueprintReadOnly, Category = "Main HUD Widget", meta = (BindWidget)) UInventoryWidget* WBPInventory;
+
 protected:
 	virtual void NativeConstruct() override;
-	UFUNCTION()
-	void UpdateProgressBar(EStateName StateName, double CurrentValue, double MaxValue);
+	UFUNCTION()	void UpdateProgressBar(EStateName StateName, double CurrentValue, double MaxValue);
 };
 //-----------------------------------------------------------------------------------------------------------
