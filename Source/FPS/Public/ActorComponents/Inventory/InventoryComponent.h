@@ -6,6 +6,8 @@
 //-----------------------------------------------------------------------------------------------------------
 class AItemMaster;
 //-----------------------------------------------------------------------------------------------------------
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FInitInvWidget);
+//-----------------------------------------------------------------------------------------------------------
 USTRUCT(BlueprintType)
 struct FItemInvStruct
 {
@@ -30,12 +32,13 @@ public:
 	UInventoryComponent();
 	TArray<FItemInvStruct> GetInventory();
 	bool PickUpItem(FItemInvStruct& ItemStruct);
+	UPROPERTY(BlueprintAssignable, Category = "Inventory Component") FInitInvWidget InitInvWidget;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory Component") int InvMaxSlots;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory Component") int InvSlotsPerRow;
 
 protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory Component") TArray<FItemInvStruct> Inventory;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory Component") int InvMaxSlots;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory Component") int InvSlotsPerRow;
 };
 //-----------------------------------------------------------------------------------------------------------

@@ -18,27 +18,22 @@ public:
 	
 	UHealthStaminaComponent();
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-	UFUNCTION(BlueprintCallable)
-	void ChangeStateValue(EStateName StateName, double Value, bool bIncrease);
-	double GetStateMapElem(EStateName StateName);
+	UFUNCTION(BlueprintCallable) void ChangeStateValue(EStateName StateName, double Value, bool bIncrease);
 
-	UPROPERTY(BlueprintAssignable, Category = "Health Stamina Component")
-	FChangeState OnChangeState;
+	double GetStateMapElem(EStateName StateName);
+	UPROPERTY(BlueprintAssignable, Category = "Health Stamina Component") FChangeState OnChangeState;
 
 protected:
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Health Stamina Component")
-	TMap<EStateName, double> StateMap;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Health Stamina Component") TMap<EStateName, double> StateMap;
 
 private:
 	void RegenHealth();
 	void RegenStamina();
-	UFUNCTION()
-	void RegenTimerManager(EStateName StateName, double CurrentValue, double MaxValue);
-	UFUNCTION()
-	void WasteStaminaTimerManager(bool bStart);
 	void WasteStamina();
+	UFUNCTION()	void RegenTimerManager(EStateName StateName, double CurrentValue, double MaxValue);
+	UFUNCTION()	void WasteStaminaTimerManager(bool bStart);
 
 	bool bStaminaTimerBlock;
 	FTimerHandle HealthTimerHandle;

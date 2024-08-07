@@ -15,9 +15,39 @@ ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 FPS_API UClass* Z_Construct_UClass_AItemMaster_NoRegister();
 FPS_API UClass* Z_Construct_UClass_UInventoryComponent();
 FPS_API UClass* Z_Construct_UClass_UInventoryComponent_NoRegister();
+FPS_API UFunction* Z_Construct_UDelegateFunction_FPS_InitInvWidget__DelegateSignature();
 FPS_API UScriptStruct* Z_Construct_UScriptStruct_FItemInvStruct();
 UPackage* Z_Construct_UPackage__Script_FPS();
 // End Cross Module References
+
+// Begin Delegate FInitInvWidget
+struct Z_Construct_UDelegateFunction_FPS_InitInvWidget__DelegateSignature_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//-----------------------------------------------------------------------------------------------------------\n" },
+#endif
+		{ "ModuleRelativePath", "Public/ActorComponents/Inventory/InventoryComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_FPS_InitInvWidget__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_FPS, nullptr, "InitInvWidget__DelegateSignature", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_FPS_InitInvWidget__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_FPS_InitInvWidget__DelegateSignature_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UDelegateFunction_FPS_InitInvWidget__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_FPS_InitInvWidget__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void FInitInvWidget_DelegateWrapper(const FMulticastScriptDelegate& InitInvWidget)
+{
+	InitInvWidget.ProcessMulticastDelegate<UObject>(NULL);
+}
+// End Delegate FInitInvWidget
 
 // Begin ScriptStruct FItemInvStruct
 static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_ItemInvStruct;
@@ -161,7 +191,7 @@ struct Z_Construct_UClass_UInventoryComponent_Statics
 		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Public/ActorComponents/Inventory/InventoryComponent.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Inventory_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InitInvWidget_MetaData[] = {
 		{ "Category", "Inventory Component" },
 		{ "ModuleRelativePath", "Public/ActorComponents/Inventory/InventoryComponent.h" },
 	};
@@ -173,11 +203,16 @@ struct Z_Construct_UClass_UInventoryComponent_Statics
 		{ "Category", "Inventory Component" },
 		{ "ModuleRelativePath", "Public/ActorComponents/Inventory/InventoryComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Inventory_MetaData[] = {
+		{ "Category", "Inventory Component" },
+		{ "ModuleRelativePath", "Public/ActorComponents/Inventory/InventoryComponent.h" },
+	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FStructPropertyParams NewProp_Inventory_Inner;
-	static const UECodeGen_Private::FArrayPropertyParams NewProp_Inventory;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_InitInvWidget;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_InvMaxSlots;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_InvSlotsPerRow;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Inventory_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_Inventory;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -185,15 +220,17 @@ struct Z_Construct_UClass_UInventoryComponent_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UInventoryComponent_Statics::NewProp_InitInvWidget = { "InitInvWidget", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInventoryComponent, InitInvWidget), Z_Construct_UDelegateFunction_FPS_InitInvWidget__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InitInvWidget_MetaData), NewProp_InitInvWidget_MetaData) }; // 2470532045
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UInventoryComponent_Statics::NewProp_InvMaxSlots = { "InvMaxSlots", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInventoryComponent, InvMaxSlots), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InvMaxSlots_MetaData), NewProp_InvMaxSlots_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UInventoryComponent_Statics::NewProp_InvSlotsPerRow = { "InvSlotsPerRow", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInventoryComponent, InvSlotsPerRow), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InvSlotsPerRow_MetaData), NewProp_InvSlotsPerRow_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UInventoryComponent_Statics::NewProp_Inventory_Inner = { "Inventory", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FItemInvStruct, METADATA_PARAMS(0, nullptr) }; // 1494047652
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UInventoryComponent_Statics::NewProp_Inventory = { "Inventory", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInventoryComponent, Inventory), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Inventory_MetaData), NewProp_Inventory_MetaData) }; // 1494047652
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UInventoryComponent_Statics::NewProp_InvMaxSlots = { "InvMaxSlots", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInventoryComponent, InvMaxSlots), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InvMaxSlots_MetaData), NewProp_InvMaxSlots_MetaData) };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UInventoryComponent_Statics::NewProp_InvSlotsPerRow = { "InvSlotsPerRow", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInventoryComponent, InvSlotsPerRow), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InvSlotsPerRow_MetaData), NewProp_InvSlotsPerRow_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UInventoryComponent_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInventoryComponent_Statics::NewProp_Inventory_Inner,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInventoryComponent_Statics::NewProp_Inventory,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInventoryComponent_Statics::NewProp_InitInvWidget,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInventoryComponent_Statics::NewProp_InvMaxSlots,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInventoryComponent_Statics::NewProp_InvSlotsPerRow,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInventoryComponent_Statics::NewProp_Inventory_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInventoryComponent_Statics::NewProp_Inventory,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UInventoryComponent_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UInventoryComponent_Statics::DependentSingletons[])() = {
@@ -239,10 +276,10 @@ struct Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_I
 		{ FItemInvStruct::StaticStruct, Z_Construct_UScriptStruct_FItemInvStruct_Statics::NewStructOps, TEXT("ItemInvStruct"), &Z_Registration_Info_UScriptStruct_ItemInvStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemInvStruct), 1494047652U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UInventoryComponent, UInventoryComponent::StaticClass, TEXT("UInventoryComponent"), &Z_Registration_Info_UClass_UInventoryComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInventoryComponent), 2337077558U) },
+		{ Z_Construct_UClass_UInventoryComponent, UInventoryComponent::StaticClass, TEXT("UInventoryComponent"), &Z_Registration_Info_UClass_UInventoryComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInventoryComponent), 1680200951U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_665366933(TEXT("/Script/FPS"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_1547771178(TEXT("/Script/FPS"),
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_Statics::ScriptStructInfo),
 	nullptr, 0);

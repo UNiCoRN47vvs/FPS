@@ -8,7 +8,7 @@ UInventoryComponent::UInventoryComponent()
 //Getter
 TArray<FItemInvStruct> UInventoryComponent::GetInventory()
 {
-	return TArray<FItemInvStruct>();
+	return Inventory;
 }
 //-----------------------------------------------------------------------------------------------------------
 void UInventoryComponent::BeginPlay()
@@ -18,6 +18,8 @@ void UInventoryComponent::BeginPlay()
 	{
 		Inventory.Add(FItemInvStruct{});
 	}
+
+	InitInvWidget.Broadcast();
 }
 //-----------------------------------------------------------------------------------------------------------
 bool UInventoryComponent::PickUpItem(FItemInvStruct& ItemStruct)
