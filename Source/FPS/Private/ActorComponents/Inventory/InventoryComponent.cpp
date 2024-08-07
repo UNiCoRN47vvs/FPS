@@ -43,7 +43,7 @@ bool UInventoryComponent::PickUpItem(FItemInvStruct& ItemStruct)
 			}
 		}
 
-		if (ItemStruct.ItemCount > item.ItemCountMax)
+		if (ItemStruct.ItemCount > ItemStruct.ItemCountMax)
 		{
 			int LocalCount = ItemStruct.ItemCount;
 			int LocalDifference = LocalCount - ItemStruct.ItemCountMax;

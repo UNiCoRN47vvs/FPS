@@ -19,6 +19,7 @@ public:
 
 	void SetInteractLine(bool bTurnOn);
 	AActor* GetTargetActor();
+	UInfoInteractWidget* InteractWidget;
 
 protected:
 	virtual void BeginPlay() override;
@@ -36,7 +37,6 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = "Interact Component")	TSubclassOf<UInfoInteractWidget> BPInteractWidget;
 
-	UInfoInteractWidget* InteractWidget;
 		
 };
 //-----------------------------------------------------------------------------------------------------------

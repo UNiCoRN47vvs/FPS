@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> FPS_API UScriptStruct* StaticStruct<struct FItemInvStruct>();
 
-#define FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_26_INCLASS_NO_PURE_DECLS \
+#define FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_27_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUInventoryComponent(); \
 	friend struct Z_Construct_UClass_UInventoryComponent_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(UInventoryComponent)
 
 
-#define FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_26_ENHANCED_CONSTRUCTORS \
+#define FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_27_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UInventoryComponent(UInventoryComponent&&); \
@@ -42,12 +42,12 @@ public: \
 	NO_API virtual ~UInventoryComponent();
 
 
-#define FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_23_PROLOG
-#define FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_26_GENERATED_BODY \
+#define FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_24_PROLOG
+#define FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_27_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_26_INCLASS_NO_PURE_DECLS \
-	FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_26_ENHANCED_CONSTRUCTORS \
+	FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_27_INCLASS_NO_PURE_DECLS \
+	FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_27_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

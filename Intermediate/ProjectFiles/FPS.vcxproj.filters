@@ -143,6 +143,12 @@
     <ClCompile Include="..\..\Source\FPS\Private\Widgets\Interact\InfoInteractWidget.cpp">
       <Filter>Source\FPS\Private\Widgets\Interact</Filter>
     </ClCompile>
+    <Filter Include="Source\FPS\Private\Widgets\Inventory">
+      <UniqueIdentifier>{07AC7D9C-A4AA-3497-89A6-3F410F75F207}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\Widgets\Inventory\InventoryWidget.cpp">
+      <Filter>Source\FPS\Private\Widgets\Inventory</Filter>
+    </ClCompile>
     <Filter Include="Source\FPS\Private\Widgets\MainHUD">
       <UniqueIdentifier>{7204B9C3-AA88-31D2-A1FD-7C9373557BD8}</UniqueIdentifier>
     </Filter>
@@ -217,6 +223,12 @@
     </Filter>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\Interact\InfoInteractWidget.h">
       <Filter>Source\FPS\Public\Widgets\Interact</Filter>
+    </ClInclude>
+    <Filter Include="Source\FPS\Public\Widgets\Inventory">
+      <UniqueIdentifier>{7D9E41E9-75E2-34F3-A224-37969EFB3CC8}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\Widgets\Inventory\InventoryWidget.h">
+      <Filter>Source\FPS\Public\Widgets\Inventory</Filter>
     </ClInclude>
     <Filter Include="Source\FPS\Public\Widgets\MainHUD">
       <UniqueIdentifier>{32BCE116-9DA7-3DFF-9561-49CB9979B14B}</UniqueIdentifier>

@@ -1,6 +1,8 @@
 #include "Items/Weapons/WeaponMaster.h"
 #include "FPS/FPSCharacter.h"
 #include "ActorComponents/Inventory/InventoryComponent.h"
+#include "ActorComponents/Interact/InteractComponent.h"
+#include "Widgets/Interact/InfoInteractWidget.h"
 //-----------------------------------------------------------------------------------------------------------
 AWeaponMaster::AWeaponMaster()
 {
@@ -44,6 +46,9 @@ void AWeaponMaster::InteractWithActor(AFPSCharacter* PlayerCharacter)
 	if (PlayerCharacter->GetInventoryComponent()->PickUpItem(LocalItemStruct))
 		Destroy();
 	else
+	{
 		ItemInfo.ItemCount = LocalItemStruct.ItemCount;
+		PlayerCharacter->GetInteractComponent()->InteractWidget->CantPickUpItem.Broadcast();
+	}
 
 }

@@ -14,7 +14,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FPS_InfoInteractWidget_generated_h
 
-#define FID_Project_FPS_Source_FPS_Public_Widgets_Interact_InfoInteractWidget_h_11_INCLASS_NO_PURE_DECLS \
+#define FID_Project_FPS_Source_FPS_Public_Widgets_Interact_InfoInteractWidget_h_8_DELEGATE \
+FPS_API void FCantPickUpItem_DelegateWrapper(const FMulticastScriptDelegate& CantPickUpItem);
+
+
+#define FID_Project_FPS_Source_FPS_Public_Widgets_Interact_InfoInteractWidget_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUInfoInteractWidget(); \
 	friend struct Z_Construct_UClass_UInfoInteractWidget_Statics; \
@@ -23,7 +27,7 @@ public: \
 	DECLARE_SERIALIZER(UInfoInteractWidget)
 
 
-#define FID_Project_FPS_Source_FPS_Public_Widgets_Interact_InfoInteractWidget_h_11_ENHANCED_CONSTRUCTORS \
+#define FID_Project_FPS_Source_FPS_Public_Widgets_Interact_InfoInteractWidget_h_13_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UInfoInteractWidget(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +41,12 @@ public: \
 	NO_API virtual ~UInfoInteractWidget();
 
 
-#define FID_Project_FPS_Source_FPS_Public_Widgets_Interact_InfoInteractWidget_h_8_PROLOG
-#define FID_Project_FPS_Source_FPS_Public_Widgets_Interact_InfoInteractWidget_h_11_GENERATED_BODY \
+#define FID_Project_FPS_Source_FPS_Public_Widgets_Interact_InfoInteractWidget_h_10_PROLOG
+#define FID_Project_FPS_Source_FPS_Public_Widgets_Interact_InfoInteractWidget_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Project_FPS_Source_FPS_Public_Widgets_Interact_InfoInteractWidget_h_11_INCLASS_NO_PURE_DECLS \
-	FID_Project_FPS_Source_FPS_Public_Widgets_Interact_InfoInteractWidget_h_11_ENHANCED_CONSTRUCTORS \
+	FID_Project_FPS_Source_FPS_Public_Widgets_Interact_InfoInteractWidget_h_13_INCLASS_NO_PURE_DECLS \
+	FID_Project_FPS_Source_FPS_Public_Widgets_Interact_InfoInteractWidget_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
