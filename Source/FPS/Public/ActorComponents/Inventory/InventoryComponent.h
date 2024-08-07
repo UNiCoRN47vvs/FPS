@@ -11,6 +11,7 @@ struct FItemInvStruct
 {
 	GENERATED_BODY()
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Inv Struct") bool bOccupied;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Inv Struct") int ItemCount;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Inv Struct") int ItemCountMax;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item Inv Struct") double ItemValue;

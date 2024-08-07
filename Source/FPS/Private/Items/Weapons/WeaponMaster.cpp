@@ -1,4 +1,6 @@
 #include "Items/Weapons/WeaponMaster.h"
+#include "FPS/FPSCharacter.h"
+#include "ActorComponents/Inventory/InventoryComponent.h"
 //-----------------------------------------------------------------------------------------------------------
 AWeaponMaster::AWeaponMaster()
 {
@@ -30,5 +32,18 @@ void AWeaponMaster::InteractWithActor(AFPSCharacter* PlayerCharacter)
 	if (!PlayerCharacter)
 		return GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, PlayerInterface = nullptr!")));
 
-	Destroy();
+	FItemInvStruct LocalItemStruct;
+	LocalItemStruct.ItemValue    = ItemWeaponInfo.Damage;
+	LocalItemStruct.ItemCount    = ItemInfo.ItemCount;
+	LocalItemStruct.ItemCountMax = ItemInfo.ItemCountMax;
+	LocalItemStruct.ItemName     = ItemInfo.ItemName;
+	LocalItemStruct.ItemDesc     = ItemInfo.ItemDesc;
+	LocalItemStruct.ItemIcon     = ItemInfo.ItemIcon;
+	LocalItemStruct.ItemClass    = ItemInfo.ItemClass;
+
+	if (PlayerCharacter->GetInventoryComponent()->PickUpItem(LocalItemStruct))
+		Destroy();
+	else
+		ItemInfo.ItemCount = LocalItemStruct.ItemCount;
+
 }
