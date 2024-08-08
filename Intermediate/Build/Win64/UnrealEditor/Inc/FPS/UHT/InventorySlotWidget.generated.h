@@ -14,16 +14,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FPS_InventorySlotWidget_generated_h
 
-#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_11_INCLASS_NO_PURE_DECLS \
+#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUInventorySlotWidget(); \
 	friend struct Z_Construct_UClass_UInventorySlotWidget_Statics; \
 public: \
 	DECLARE_CLASS(UInventorySlotWidget, UUserWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/FPS"), NO_API) \
-	DECLARE_SERIALIZER(UInventorySlotWidget)
+	DECLARE_SERIALIZER(UInventorySlotWidget) \
+	virtual UObject* _getUObject() const override { return const_cast<UInventorySlotWidget*>(this); }
 
 
-#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_11_ENHANCED_CONSTRUCTORS \
+#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_13_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UInventorySlotWidget(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +38,12 @@ public: \
 	NO_API virtual ~UInventorySlotWidget();
 
 
-#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_8_PROLOG
-#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_11_GENERATED_BODY \
+#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_10_PROLOG
+#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_11_INCLASS_NO_PURE_DECLS \
-	FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_11_ENHANCED_CONSTRUCTORS \
+	FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_13_INCLASS_NO_PURE_DECLS \
+	FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

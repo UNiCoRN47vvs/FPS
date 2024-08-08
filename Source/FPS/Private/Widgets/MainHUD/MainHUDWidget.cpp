@@ -39,3 +39,4 @@ void UMainHUDWidget::UpdateProgressBar(EStateName StateName, double CurrentValue
 		break;
 	}
 }
+//-----------------------------------------------------------------------------------------------------------

@@ -30,6 +30,7 @@ private:
 	void WidgetInfo(bool bCreate, IItemInteract* ItemInteract);
 
 	int TimerCounter;
+	FString StringName;
 	AFPSCharacter* PlayerCharacter;
 	UCameraComponent* CameraComponent;
 	FTimerHandle LineTraceTimer;

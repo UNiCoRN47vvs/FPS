@@ -181,6 +181,7 @@ void AFPSCharacter::ShowHideInventory()
 	case ESlateVisibility::Hidden:
 		PlayerController->bShowMouseCursor = true;
 		UWidgetBlueprintLibrary::SetInputMode_GameAndUIEx(PlayerController, PlayerController->MainHUD->WBPInventory);
+		PlayerController->MainHUD->WBPInventory->UpdateInventoryWidget();
 		PlayerController->MainHUD->WBPInventory->SetVisibility(ESlateVisibility::Visible);
 		break;
 

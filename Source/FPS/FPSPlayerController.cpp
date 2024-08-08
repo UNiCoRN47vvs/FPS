@@ -18,3 +18,6 @@ void AFPSPlayerController::BeginPlay()
 
 }
 //-----------------------------------------------------------------------------------------------------------
+void AFPSPlayerController::DragDropOperation(UInventoryComponent* StorageComponent, int Index, bool bIsDrop)
+{
+}

@@ -43,11 +43,16 @@ struct Z_Construct_UScriptStruct_FItemSuppliesMaster_Statics
 #endif
 		{ "ModuleRelativePath", "Public/Items/Supplies/SuppliesMaster.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_UseValue_MetaData[] = {
+		{ "Category", "Item Struct" },
+		{ "ModuleRelativePath", "Public/Items/Supplies/SuppliesMaster.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StaticMesh_MetaData[] = {
 		{ "Category", "Item Struct" },
 		{ "ModuleRelativePath", "Public/Items/Supplies/SuppliesMaster.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FDoublePropertyParams NewProp_UseValue;
 	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_StaticMesh;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static void* NewStructOps()
@@ -56,8 +61,10 @@ struct Z_Construct_UScriptStruct_FItemSuppliesMaster_Statics
 	}
 	static const UECodeGen_Private::FStructParams StructParams;
 };
+const UECodeGen_Private::FDoublePropertyParams Z_Construct_UScriptStruct_FItemSuppliesMaster_Statics::NewProp_UseValue = { "UseValue", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemSuppliesMaster, UseValue), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UseValue_MetaData), NewProp_UseValue_MetaData) };
 const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UScriptStruct_FItemSuppliesMaster_Statics::NewProp_StaticMesh = { "StaticMesh", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemSuppliesMaster, StaticMesh), Z_Construct_UClass_UStaticMesh_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StaticMesh_MetaData), NewProp_StaticMesh_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FItemSuppliesMaster_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemSuppliesMaster_Statics::NewProp_UseValue,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemSuppliesMaster_Statics::NewProp_StaticMesh,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemSuppliesMaster_Statics::PropPointers) < 2048);
@@ -108,13 +115,13 @@ struct Z_Construct_UClass_ASuppliesMaster_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Items/Supplies/SuppliesMaster.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemWeaponInfo_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemSuppliesInfo_MetaData[] = {
 		{ "Category", "Item Master" },
 		{ "ModuleRelativePath", "Public/Items/Supplies/SuppliesMaster.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_StaticMeshComponent;
-	static const UECodeGen_Private::FStructPropertyParams NewProp_ItemWeaponInfo;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ItemSuppliesInfo;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -123,10 +130,10 @@ struct Z_Construct_UClass_ASuppliesMaster_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASuppliesMaster_Statics::NewProp_StaticMeshComponent = { "StaticMeshComponent", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASuppliesMaster, StaticMeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StaticMeshComponent_MetaData), NewProp_StaticMeshComponent_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ASuppliesMaster_Statics::NewProp_ItemWeaponInfo = { "ItemWeaponInfo", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASuppliesMaster, ItemWeaponInfo), Z_Construct_UScriptStruct_FItemSuppliesMaster, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemWeaponInfo_MetaData), NewProp_ItemWeaponInfo_MetaData) }; // 2525049582
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ASuppliesMaster_Statics::NewProp_ItemSuppliesInfo = { "ItemSuppliesInfo", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASuppliesMaster, ItemSuppliesInfo), Z_Construct_UScriptStruct_FItemSuppliesMaster, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemSuppliesInfo_MetaData), NewProp_ItemSuppliesInfo_MetaData) }; // 1502175472
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASuppliesMaster_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASuppliesMaster_Statics::NewProp_StaticMeshComponent,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASuppliesMaster_Statics::NewProp_ItemWeaponInfo,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASuppliesMaster_Statics::NewProp_ItemSuppliesInfo,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASuppliesMaster_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ASuppliesMaster_Statics::DependentSingletons[])() = {
@@ -169,13 +176,13 @@ ASuppliesMaster::~ASuppliesMaster() {}
 struct Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FItemSuppliesMaster::StaticStruct, Z_Construct_UScriptStruct_FItemSuppliesMaster_Statics::NewStructOps, TEXT("ItemSuppliesMaster"), &Z_Registration_Info_UScriptStruct_ItemSuppliesMaster, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemSuppliesMaster), 2525049582U) },
+		{ FItemSuppliesMaster::StaticStruct, Z_Construct_UScriptStruct_FItemSuppliesMaster_Statics::NewStructOps, TEXT("ItemSuppliesMaster"), &Z_Registration_Info_UScriptStruct_ItemSuppliesMaster, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemSuppliesMaster), 1502175472U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASuppliesMaster, ASuppliesMaster::StaticClass, TEXT("ASuppliesMaster"), &Z_Registration_Info_UClass_ASuppliesMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASuppliesMaster), 1619071443U) },
+		{ Z_Construct_UClass_ASuppliesMaster, ASuppliesMaster::StaticClass, TEXT("ASuppliesMaster"), &Z_Registration_Info_UClass_ASuppliesMaster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASuppliesMaster), 1677157242U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_2632548248(TEXT("/Script/FPS"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_39812645(TEXT("/Script/FPS"),
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Items_Supplies_SuppliesMaster_h_Statics::ScriptStructInfo),
 	nullptr, 0);

@@ -11,9 +11,11 @@ void EmptyLinkFunctionForGeneratedCodeInventorySlotWidget() {}
 
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
+FPS_API UClass* Z_Construct_UClass_UInventorySlot_NoRegister();
 FPS_API UClass* Z_Construct_UClass_UInventorySlotWidget();
 FPS_API UClass* Z_Construct_UClass_UInventorySlotWidget_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UImage_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UUserWidget();
 UPackage* Z_Construct_UPackage__Script_FPS();
 // End Cross Module References
@@ -47,16 +49,29 @@ struct Z_Construct_UClass_UInventorySlotWidget_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Widgets/Inventory/InventorySlotWidget.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemCountTB_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "Inventory Slot Widget" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Widgets/Inventory/InventorySlotWidget.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DefaultImage_MetaData[] = {
+		{ "Category", "Inventor Slot Widget" },
+		{ "ModuleRelativePath", "Public/Widgets/Inventory/InventorySlotWidget.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ImageTexture2D_MetaData[] = {
 		{ "Category", "Inventor Slot Widget" },
 		{ "ModuleRelativePath", "Public/Widgets/Inventory/InventorySlotWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Index;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Image;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ItemCountTB;
 	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_DefaultImage;
+	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_ImageTexture2D;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UInventorySlotWidget>::IsAbstract,
 	};
@@ -64,11 +79,15 @@ struct Z_Construct_UClass_UInventorySlotWidget_Statics
 };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UInventorySlotWidget_Statics::NewProp_Index = { "Index", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInventorySlotWidget, Index), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Index_MetaData), NewProp_Index_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UInventorySlotWidget_Statics::NewProp_Image = { "Image", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInventorySlotWidget, Image), Z_Construct_UClass_UImage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Image_MetaData), NewProp_Image_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UInventorySlotWidget_Statics::NewProp_ItemCountTB = { "ItemCountTB", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInventorySlotWidget, ItemCountTB), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemCountTB_MetaData), NewProp_ItemCountTB_MetaData) };
 const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UInventorySlotWidget_Statics::NewProp_DefaultImage = { "DefaultImage", nullptr, (EPropertyFlags)0x0024080000000005, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInventorySlotWidget, DefaultImage), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultImage_MetaData), NewProp_DefaultImage_MetaData) };
+const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UInventorySlotWidget_Statics::NewProp_ImageTexture2D = { "ImageTexture2D", nullptr, (EPropertyFlags)0x0024080000000005, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInventorySlotWidget, ImageTexture2D), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ImageTexture2D_MetaData), NewProp_ImageTexture2D_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UInventorySlotWidget_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInventorySlotWidget_Statics::NewProp_Index,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInventorySlotWidget_Statics::NewProp_Image,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInventorySlotWidget_Statics::NewProp_ItemCountTB,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInventorySlotWidget_Statics::NewProp_DefaultImage,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInventorySlotWidget_Statics::NewProp_ImageTexture2D,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UInventorySlotWidget_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UInventorySlotWidget_Statics::DependentSingletons[])() = {
@@ -76,6 +95,9 @@ UObject* (*const Z_Construct_UClass_UInventorySlotWidget_Statics::DependentSingl
 	(UObject* (*)())Z_Construct_UPackage__Script_FPS,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UInventorySlotWidget_Statics::DependentSingletons) < 16);
+const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_UInventorySlotWidget_Statics::InterfaceParams[] = {
+	{ Z_Construct_UClass_UInventorySlot_NoRegister, (int32)VTABLE_OFFSET(UInventorySlotWidget, IInventorySlot), false },  // 91359442
+};
 const UECodeGen_Private::FClassParams Z_Construct_UClass_UInventorySlotWidget_Statics::ClassParams = {
 	&UInventorySlotWidget::StaticClass,
 	nullptr,
@@ -83,11 +105,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UInventorySlotWidget_St
 	DependentSingletons,
 	nullptr,
 	Z_Construct_UClass_UInventorySlotWidget_Statics::PropPointers,
-	nullptr,
+	InterfaceParams,
 	UE_ARRAY_COUNT(DependentSingletons),
 	0,
 	UE_ARRAY_COUNT(Z_Construct_UClass_UInventorySlotWidget_Statics::PropPointers),
-	0,
+	UE_ARRAY_COUNT(InterfaceParams),
 	0x00B010A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UInventorySlotWidget_Statics::Class_MetaDataParams), Z_Construct_UClass_UInventorySlotWidget_Statics::Class_MetaDataParams)
 };
@@ -112,10 +134,10 @@ UInventorySlotWidget::~UInventorySlotWidget() {}
 struct Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UInventorySlotWidget, UInventorySlotWidget::StaticClass, TEXT("UInventorySlotWidget"), &Z_Registration_Info_UClass_UInventorySlotWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInventorySlotWidget), 1648001450U) },
+		{ Z_Construct_UClass_UInventorySlotWidget, UInventorySlotWidget::StaticClass, TEXT("UInventorySlotWidget"), &Z_Registration_Info_UClass_UInventorySlotWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInventorySlotWidget), 656008684U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_3609922250(TEXT("/Script/FPS"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_1396315217(TEXT("/Script/FPS"),
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventorySlotWidget_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

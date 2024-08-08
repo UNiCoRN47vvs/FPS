@@ -37,6 +37,7 @@ public:
 	UInventoryComponent* GetInventoryComponent();
 
 	void StopSprint();
+	void ShowHideInventory();
 
 	UPROPERTY(BlueprintAssignable, Category = "Health Stamina Component") FChangeSprint OnChangeSprint;
 
@@ -59,7 +60,6 @@ protected:
 private:
 	void Sprint();
 	void Interact();
-	void ShowHideInventory();
 
 	double StandartSpeed;
 	UCharacterMovementComponent* CharacterMovement;

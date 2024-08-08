@@ -301,10 +301,19 @@
     <ClCompile Include="..\..\Source\FPS\Private\ActorComponents\State\StateMasterComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\FPS\Private\Interfaces\DragDropInterface.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\FPS\Private\Interfaces\InventorySlot.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\Interfaces\ItemInteract.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\Interfaces\PlayerInteract.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\FPS\Private\Interfaces\StorageInterface.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\Items\ItemMaster.cpp">
@@ -335,8 +344,11 @@
     <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\Inventory\InventoryComponent.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\State\HealthStaminaComponent.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\State\StateMasterComponent.h"/>
+    <ClInclude Include="..\..\Source\FPS\Public\Interfaces\DragDropInterface.h"/>
+    <ClInclude Include="..\..\Source\FPS\Public\Interfaces\InventorySlot.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Interfaces\ItemInteract.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Interfaces\PlayerInteract.h"/>
+    <ClInclude Include="..\..\Source\FPS\Public\Interfaces\StorageInterface.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Items\ItemMaster.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Items\Supplies\SuppliesMaster.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Items\Weapons\WeaponMaster.h"/>

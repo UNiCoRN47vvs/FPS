@@ -78,6 +78,8 @@ void UInteractComponent::LineTraceCall()
 		IItemInteract* LocalItemInteract = Cast<IItemInteract>(TargetActor);
 		if (LocalItemInteract)
 		{
+			if(StringName != LocalItemInteract->GetItemInfo().ItemName.ToString())
+				WidgetInfo(false, LocalItemInteract);
 			//GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, LocalItemInteract->GetItemInfo());
 			WidgetInfo(true, LocalItemInteract);
 		}
@@ -104,10 +106,10 @@ void UInteractComponent::WidgetInfo(bool bCreate, IItemInteract* ItemInteract)
 
 		FString LocalString1 = FString(TEXT("[E] "));
 		FString LocalString2 = FString(TEXT("Interact "));
-		FString LocalString3 = ItemInteract->GetItemInfo().ItemName.ToString();
+		StringName = ItemInteract->GetItemInfo().ItemName.ToString();
 
 		InteractWidget = CreateWidget<UInfoInteractWidget>(GetWorld(), BPInteractWidget);
-		InteractWidget->TextBlock->SetText(FText::FromString(LocalString1 + LocalString2 + LocalString3));
+		InteractWidget->TextBlock->SetText(FText::FromString(LocalString1 + LocalString2 + StringName));
 		InteractWidget->AddToViewport();
 	}
 	else

@@ -110,10 +110,19 @@
     <Filter Include="Source\FPS\Private\Interfaces">
       <UniqueIdentifier>{AEE2C247-8FC8-34E3-905D-B9A0A4AB1276}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\Interfaces\DragDropInterface.cpp">
+      <Filter>Source\FPS\Private\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\FPS\Private\Interfaces\InventorySlot.cpp">
+      <Filter>Source\FPS\Private\Interfaces</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\Interfaces\ItemInteract.cpp">
       <Filter>Source\FPS\Private\Interfaces</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\Interfaces\PlayerInteract.cpp">
+      <Filter>Source\FPS\Private\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\FPS\Private\Interfaces\StorageInterface.cpp">
       <Filter>Source\FPS\Private\Interfaces</Filter>
     </ClCompile>
     <Filter Include="Source\FPS\Private\Items">
@@ -194,10 +203,19 @@
     <Filter Include="Source\FPS\Public\Interfaces">
       <UniqueIdentifier>{B9533092-EBD9-3DCC-BB8E-8A74B0C742E8}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\Interfaces\DragDropInterface.h">
+      <Filter>Source\FPS\Public\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\FPS\Public\Interfaces\InventorySlot.h">
+      <Filter>Source\FPS\Public\Interfaces</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\FPS\Public\Interfaces\ItemInteract.h">
       <Filter>Source\FPS\Public\Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\FPS\Public\Interfaces\PlayerInteract.h">
+      <Filter>Source\FPS\Public\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\FPS\Public\Interfaces\StorageInterface.h">
       <Filter>Source\FPS\Public\Interfaces</Filter>
     </ClInclude>
     <Filter Include="Source\FPS\Public\Items">
