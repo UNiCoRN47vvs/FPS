@@ -14,11 +14,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FPS_FPSCharacter_generated_h
 
-#define FID_Project_FPS_Source_FPS_FPSCharacter_h_19_DELEGATE \
+#define FID_Project_FPS_Source_FPS_FPSCharacter_h_20_DELEGATE \
 FPS_API void FChangeSprint_DelegateWrapper(const FMulticastScriptDelegate& ChangeSprint, bool bStart);
 
 
-#define FID_Project_FPS_Source_FPS_FPSCharacter_h_24_INCLASS_NO_PURE_DECLS \
+#define FID_Project_FPS_Source_FPS_FPSCharacter_h_25_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFPSCharacter(); \
 	friend struct Z_Construct_UClass_AFPSCharacter_Statics; \
@@ -28,7 +28,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<AFPSCharacter*>(this); }
 
 
-#define FID_Project_FPS_Source_FPS_FPSCharacter_h_24_ENHANCED_CONSTRUCTORS \
+#define FID_Project_FPS_Source_FPS_FPSCharacter_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AFPSCharacter(AFPSCharacter&&); \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~AFPSCharacter();
 
 
-#define FID_Project_FPS_Source_FPS_FPSCharacter_h_21_PROLOG
-#define FID_Project_FPS_Source_FPS_FPSCharacter_h_24_GENERATED_BODY \
+#define FID_Project_FPS_Source_FPS_FPSCharacter_h_22_PROLOG
+#define FID_Project_FPS_Source_FPS_FPSCharacter_h_25_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Project_FPS_Source_FPS_FPSCharacter_h_24_INCLASS_NO_PURE_DECLS \
-	FID_Project_FPS_Source_FPS_FPSCharacter_h_24_ENHANCED_CONSTRUCTORS \
+	FID_Project_FPS_Source_FPS_FPSCharacter_h_25_INCLASS_NO_PURE_DECLS \
+	FID_Project_FPS_Source_FPS_FPSCharacter_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

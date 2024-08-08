@@ -1,8 +1,12 @@
 #include "FPSCharacter.h"
 #include "FPSProjectile.h"
+#include "Blueprint/WidgetBlueprintLibrary.h"
 #include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "FPS/FPSPlayerController.h"
+#include "Widgets/MainHUD/MainHUDWidget.h"
+#include "Widgets/Inventory/InventoryWidget.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "EnhancedInputComponent.h"
@@ -55,6 +59,7 @@ void AFPSCharacter::BeginPlay()
 	Super::BeginPlay();
 }
 //-----------------------------------------------------------------------------------------------------------
+//Inputs
 void AFPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {	
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent))
@@ -67,6 +72,7 @@ void AFPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Completed, this, &AFPSCharacter::StopSprint);
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AFPSCharacter::Look);
 		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Started, this, &AFPSCharacter::Interact);
+		EnhancedInputComponent->BindAction(InventoryAction, ETriggerEvent::Started, this, &AFPSCharacter::ShowHideInventory);
 	}
 	else
 		GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, EnhancedInputComponent = nullptr!")));
@@ -157,4 +163,36 @@ void AFPSCharacter::Interact()
 	}
 	else
 		GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, GetInteractComponent()->GetTargetActor() = nullptr!")));
+}
+//-----------------------------------------------------------------------------------------------------------
+void AFPSCharacter::ShowHideInventory()
+{
+	if (!PlayerController)
+	{
+		PlayerController = Cast<AFPSPlayerController>(GetController());
+		if(!PlayerController)
+			return GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, PlayerController = nullptr!")));
+	}
+
+	const ESlateVisibility LocalVisibility = PlayerController->MainHUD->WBPInventory->GetVisibility();
+	switch (LocalVisibility)
+	{
+	case ESlateVisibility::Collapsed:
+	case ESlateVisibility::Hidden:
+		PlayerController->bShowMouseCursor = true;
+		UWidgetBlueprintLibrary::SetInputMode_GameAndUIEx(PlayerController, PlayerController->MainHUD->WBPInventory);
+		PlayerController->MainHUD->WBPInventory->SetVisibility(ESlateVisibility::Visible);
+		break;
+
+	case ESlateVisibility::Visible:
+	case ESlateVisibility::HitTestInvisible:
+	case ESlateVisibility::SelfHitTestInvisible:
+		PlayerController->bShowMouseCursor = false;
+		UWidgetBlueprintLibrary::SetInputMode_GameOnly(PlayerController);
+		PlayerController->MainHUD->WBPInventory->SetVisibility(ESlateVisibility::Collapsed);
+		break;
+
+	default:
+		break;
+	}
 }

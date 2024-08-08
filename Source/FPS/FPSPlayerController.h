@@ -18,13 +18,9 @@ public:
 protected:
 
 	virtual void BeginPlay() override;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
-	UInputMappingContext* InputMappingContext;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input) UInputMappingContext* InputMappingContext;
 private:
-
-	UPROPERTY(EditDefaultsOnly, Category = "FPS Player Controller")
-	TSubclassOf<UMainHUDWidget> MainHUDWidget;
+	UPROPERTY(EditDefaultsOnly, Category = "FPS Player Controller") TSubclassOf<UMainHUDWidget> MainHUDWidget;
 
 };
 //-----------------------------------------------------------------------------------------------------------

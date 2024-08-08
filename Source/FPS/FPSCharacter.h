@@ -14,6 +14,7 @@ class UInputMappingContext;
 class UHealthStaminaComponent;
 class UInteractComponent;
 class UInventoryComponent;
+class AFPSPlayerController;
 struct FInputActionValue;
 //-----------------------------------------------------------------------------------------------------------
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FChangeSprint, bool, bStart);
@@ -54,14 +55,16 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))	UInputAction* SprintAction;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))	UInputAction* InteractAction;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))	class UInputAction* LookAction;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true")) UInputAction* InventoryAction;
 private:
 	void Sprint();
 	void Interact();
+	void ShowHideInventory();
 
 	double StandartSpeed;
 	UCharacterMovementComponent* CharacterMovement;
 	UHealthStaminaComponent* HealthStaminaComponent;
 	UInteractComponent* InteractComponent;
-
+	AFPSPlayerController* PlayerController;
 };
 //-----------------------------------------------------------------------------------------------------------

@@ -7,16 +7,25 @@ void UInventoryWidget::NativeConstruct()
 {
 	Super::NativeConstruct();
 
-	AFPSCharacter* PlayerCharacter = Cast<AFPSCharacter>(GetOwningPlayer()->GetPawn());
-	if (PlayerCharacter)
-		PlayerCharacter->GetInventoryComponent()->InitInvWidget.AddDynamic(this, &UInventoryWidget::InitInventoryWidget);
+	if (!PlayerCharacter)
+	{
+		PlayerCharacter = Cast<AFPSCharacter>(GetOwningPlayer()->GetPawn());
+		if(!PlayerCharacter)
+			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InventoryWidget, PlayerCharacter = nullptr!")));
+	}
 	else
-		GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InventoryWidget, PlayerCharacter = nullptr!")));
+		PlayerCharacter->GetInventoryComponent()->InitInvWidget.AddDynamic(this, &UInventoryWidget::InitInventoryWidget);
 }
 //-----------------------------------------------------------------------------------------------------------
 void UInventoryWidget::InitInventoryWidget()
 {
-	AFPSCharacter* PlayerCharacter = Cast<AFPSCharacter>(GetOwningPlayer()->GetPawn());
+	if (!PlayerCharacter)
+	{
+		PlayerCharacter = Cast<AFPSCharacter>(GetOwningPlayer()->GetPawn());
+		if(!PlayerCharacter)
+			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InventoryWidget, PlayerCharacter = nullptr!")));
+	}
+
 	if (PlayerCharacter)
 	{
 		int InvSlotsPerRow = PlayerCharacter->GetInventoryComponent()->InvSlotsPerRow;
@@ -34,4 +43,20 @@ void UInventoryWidget::InitInventoryWidget()
 		}
 	}else
 		GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InventoryWidget, PlayerCharacter = nullptr!")));
+}
+//-----------------------------------------------------------------------------------------------------------
+void UInventoryWidget::UpdateInventoryWidget()
+{
+	if (!PlayerCharacter)
+	{
+		PlayerCharacter = Cast<AFPSCharacter>(GetOwningPlayer()->GetPawn());
+		if(!PlayerCharacter)
+			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InventoryWidget, PlayerCharacter = nullptr!")));
+	}
+
+	TArray<FItemInvStruct> Inventory = PlayerCharacter->GetInventoryComponent()->GetInventory();
+	for (int i = 0; i < UniformGridPanel->GetAllChildren().Num(); ++i)
+	{
+
+	}
 }
