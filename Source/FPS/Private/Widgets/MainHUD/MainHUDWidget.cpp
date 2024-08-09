@@ -52,8 +52,8 @@ void UMainHUDWidget::DragDropOperation(UInventoryComponent* StorageComponent, in
 		{
 			TArray<FItemInvStruct> LocalDragItemStorage = DragStorage->GetInventory();
 			TArray<FItemInvStruct> LocalDropItemStorage = DropStorage->GetInventory();
-			DragStorage->SetItemFromIndex(LocalDropItemStorage[DropIndex], DropIndex);
-			DropStorage->SetItemFromIndex(LocalDragItemStorage[DragIndex], DragIndex);
+			DragStorage->SetItemFromIndex(LocalDropItemStorage[DropIndex], DragIndex);
+			DropStorage->SetItemFromIndex(LocalDragItemStorage[DragIndex], DropIndex);
 			WBPInventory->UpdateInventoryWidget();
 		}
 	}

@@ -7,6 +7,8 @@
 #include "Interfaces/InventorySlot.h"
 #include "InventorySlotWidget.generated.h"
 //-----------------------------------------------------------------------------------------------------------
+class UInventoryComponent;
+//-----------------------------------------------------------------------------------------------------------
 UCLASS()
 class FPS_API UInventorySlotWidget : public UUserWidget, public IInventorySlot
 {
@@ -16,6 +18,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory Slot Widget") int Index;
 	UPROPERTY(BlueprintReadOnly, Category = "Inventory Slot Widget", meta = (BindWidget)) UImage* Image;
 	UPROPERTY(BlueprintReadOnly, Category = "Inventory Slot Widget", meta = (BindWidget)) UTextBlock* ItemCountTB;
+	UInventoryComponent* StorageComponent;
 protected:
 	virtual void NativeConstruct() override;
 	virtual void NativeOnDragDetected(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent, UDragDropOperation*& OutOperation) override;

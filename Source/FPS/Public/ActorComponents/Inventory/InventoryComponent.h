@@ -2,7 +2,6 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "Interfaces/DragDropInterface.h"
 #include "InventoryComponent.generated.h"
 //-----------------------------------------------------------------------------------------------------------
 class AItemMaster;
@@ -25,7 +24,7 @@ struct FItemInvStruct
 };
 //-----------------------------------------------------------------------------------------------------------
 UCLASS(Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class FPS_API UInventoryComponent : public UActorComponent, public IDragDropInterface
+class FPS_API UInventoryComponent : public UActorComponent
 {
 	GENERATED_BODY()
 

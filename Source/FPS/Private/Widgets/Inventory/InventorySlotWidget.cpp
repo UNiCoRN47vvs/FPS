@@ -1,4 +1,5 @@
 #include "Widgets/Inventory/InventorySlotWidget.h"
+#include "Components/PanelWidget.h"
 #include "Interfaces/StorageInterface.h"
 #include "FPS/FPSPlayerController.h"
 #include "Widgets/MainHUD/MainHUDWidget.h"
@@ -50,19 +51,15 @@ bool UInventorySlotWidget::NativeOnDrop(const FGeometry& InGeometry, const FDrag
 //-----------------------------------------------------------------------------------------------------------
 void UInventorySlotWidget::DragDropFunc(bool bIsDrop)
 {
-	IStorageInterface* LocalStorageInterface = Cast<IStorageInterface>(this->GetRootWidget());
-	if (LocalStorageInterface)
+	if (StorageComponent)
 	{
-		UInventoryComponent* LocalStorageComponent = Cast<UInventoryComponent>(LocalStorageInterface->GetStorageComponent());
-		if (LocalStorageComponent)
+		AFPSPlayerController* LocalPlayerController = Cast<AFPSPlayerController>(this->GetOwningPlayer());
+		if (LocalPlayerController)
 		{
-			AFPSPlayerController* LocalPlayerController = Cast<AFPSPlayerController>(this->GetOwningPlayer());
-			if (LocalPlayerController)
-			{
-				LocalPlayerController->MainHUD->DragDropOperation(LocalStorageComponent, Index, bIsDrop);
-				return;
-			}
+			LocalPlayerController->MainHUD->DragDropOperation(StorageComponent, Index, bIsDrop);
+			return;
 		}
 	}
+
 	return GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("FPSCharacter, LocalStorageInterface or LocalStorageComponent or LocalDragDropInterface = nullptr!")));
 }

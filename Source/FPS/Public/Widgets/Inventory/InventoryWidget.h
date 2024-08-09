@@ -15,7 +15,7 @@ class FPS_API UInventoryWidget : public UUserWidget, public IStorageInterface
 	GENERATED_BODY()
 public:
 	UFUNCTION() void UpdateInventoryWidget();
-	virtual UInventoryComponent* GetStorageComponent();
+	virtual UInventoryComponent* GetStorageComponent() override;
 	UPROPERTY(BlueprintReadOnly, Category = "Inventory Slot Widget", meta = (BindWidget)) UUniformGridPanel* UniformGridPanel;
 	UPROPERTY(BlueprintReadOnly, Category = "Inventory Slot Widget", meta = (BindWidget)) UButton* ButtonClose;
 protected:

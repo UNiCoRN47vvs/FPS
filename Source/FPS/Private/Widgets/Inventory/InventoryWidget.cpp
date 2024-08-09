@@ -44,6 +44,7 @@ void UInventoryWidget::InitInventoryWidget()
 				return;
 
 			LocalSlotWidget->Index = i;
+			LocalSlotWidget->StorageComponent = GetStorageComponent();
 			UniformGridPanel->AddChildToUniformGrid(LocalSlotWidget, Row, Column);
 		}
 	}else
@@ -80,7 +81,7 @@ void UInventoryWidget::UpdateInventoryWidget()
 		LocalSlotInterface->UpdateInvSlot(Inventory[i].ItemIcon, Inventory[i].ItemCount);
 	}
 }
-
+//-----------------------------------------------------------------------------------------------------------
 UInventoryComponent* UInventoryWidget::GetStorageComponent()
 {
 	if (!PlayerCharacter)
