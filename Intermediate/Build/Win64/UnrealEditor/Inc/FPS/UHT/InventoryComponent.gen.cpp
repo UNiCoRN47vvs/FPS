@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodeInventoryComponent() {}
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 FPS_API UClass* Z_Construct_UClass_AItemMaster_NoRegister();
+FPS_API UClass* Z_Construct_UClass_UDragDropInterface_NoRegister();
 FPS_API UClass* Z_Construct_UClass_UInventoryComponent();
 FPS_API UClass* Z_Construct_UClass_UInventoryComponent_NoRegister();
 FPS_API UFunction* Z_Construct_UDelegateFunction_FPS_InitInvWidget__DelegateSignature();
@@ -215,6 +216,7 @@ struct Z_Construct_UClass_UInventoryComponent_Statics
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_Inventory;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UInventoryComponent>::IsAbstract,
 	};
@@ -238,6 +240,9 @@ UObject* (*const Z_Construct_UClass_UInventoryComponent_Statics::DependentSingle
 	(UObject* (*)())Z_Construct_UPackage__Script_FPS,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UInventoryComponent_Statics::DependentSingletons) < 16);
+const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_UInventoryComponent_Statics::InterfaceParams[] = {
+	{ Z_Construct_UClass_UDragDropInterface_NoRegister, (int32)VTABLE_OFFSET(UInventoryComponent, IDragDropInterface), false },  // 3352450350
+};
 const UECodeGen_Private::FClassParams Z_Construct_UClass_UInventoryComponent_Statics::ClassParams = {
 	&UInventoryComponent::StaticClass,
 	"Engine",
@@ -245,11 +250,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UInventoryComponent_Sta
 	DependentSingletons,
 	nullptr,
 	Z_Construct_UClass_UInventoryComponent_Statics::PropPointers,
-	nullptr,
+	InterfaceParams,
 	UE_ARRAY_COUNT(DependentSingletons),
 	0,
 	UE_ARRAY_COUNT(Z_Construct_UClass_UInventoryComponent_Statics::PropPointers),
-	0,
+	UE_ARRAY_COUNT(InterfaceParams),
 	0x00B000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UInventoryComponent_Statics::Class_MetaDataParams), Z_Construct_UClass_UInventoryComponent_Statics::Class_MetaDataParams)
 };
@@ -276,10 +281,10 @@ struct Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_I
 		{ FItemInvStruct::StaticStruct, Z_Construct_UScriptStruct_FItemInvStruct_Statics::NewStructOps, TEXT("ItemInvStruct"), &Z_Registration_Info_UScriptStruct_ItemInvStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemInvStruct), 1494047652U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UInventoryComponent, UInventoryComponent::StaticClass, TEXT("UInventoryComponent"), &Z_Registration_Info_UClass_UInventoryComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInventoryComponent), 1680200951U) },
+		{ Z_Construct_UClass_UInventoryComponent, UInventoryComponent::StaticClass, TEXT("UInventoryComponent"), &Z_Registration_Info_UClass_UInventoryComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInventoryComponent), 111953654U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_1547771178(TEXT("/Script/FPS"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_3587605729(TEXT("/Script/FPS"),
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_ActorComponents_Inventory_InventoryComponent_h_Statics::ScriptStructInfo),
 	nullptr, 0);

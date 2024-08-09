@@ -2,19 +2,17 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
-#include "Interfaces/DragDropInterface.h"
 #include "FPSPlayerController.generated.h"
 //-----------------------------------------------------------------------------------------------------------
 class UInputMappingContext;
 class UMainHUDWidget;
 //-----------------------------------------------------------------------------------------------------------
 UCLASS()
-class FPS_API AFPSPlayerController : public APlayerController, public IDragDropInterface
+class FPS_API AFPSPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 
 public:
-	virtual void DragDropOperation(UInventoryComponent* StorageComponent, int Index, bool bIsDrop);
 	UMainHUDWidget* MainHUD;
 	
 protected:

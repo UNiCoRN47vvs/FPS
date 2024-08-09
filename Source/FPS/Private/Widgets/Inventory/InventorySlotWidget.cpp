@@ -1,6 +1,7 @@
 #include "Widgets/Inventory/InventorySlotWidget.h"
 #include "Interfaces/StorageInterface.h"
-#include "Interfaces/DragDropInterface.h"
+#include "FPS/FPSPlayerController.h"
+#include "Widgets/MainHUD/MainHUDWidget.h"
 #include "ActorComponents/Inventory/InventoryComponent.h" //Изменить когда будет общий родитель у инвентаря и сундука!
 //-----------------------------------------------------------------------------------------------------------
 void UInventorySlotWidget::NativeConstruct()
@@ -55,10 +56,10 @@ void UInventorySlotWidget::DragDropFunc(bool bIsDrop)
 		UInventoryComponent* LocalStorageComponent = Cast<UInventoryComponent>(LocalStorageInterface->GetStorageComponent());
 		if (LocalStorageComponent)
 		{
-			IDragDropInterface* LocalDragDropInterface = Cast<IDragDropInterface>(this->GetOwningPlayer());
-			if (LocalDragDropInterface)
+			AFPSPlayerController* LocalPlayerController = Cast<AFPSPlayerController>(this->GetOwningPlayer());
+			if (LocalPlayerController)
 			{
-				LocalDragDropInterface->DragDropOperation(LocalStorageComponent, Index, bIsDrop);
+				LocalPlayerController->MainHUD->DragDropOperation(LocalStorageComponent, Index, bIsDrop);
 				return;
 			}
 		}

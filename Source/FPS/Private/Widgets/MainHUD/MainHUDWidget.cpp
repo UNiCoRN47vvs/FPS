@@ -1,6 +1,8 @@
 #include "Widgets/MainHUD/MainHUDWidget.h"
 #include "FPS/FPSCharacter.h"
+#include "ActorComponents/Inventory/InventoryComponent.h"
 #include "Widgets/ProgressBar/ProgressBarWidget.h"
+#include "Widgets/Inventory/InventoryWidget.h"
 //-----------------------------------------------------------------------------------------------------------
 void UMainHUDWidget::NativeConstruct()
 {
@@ -40,3 +42,24 @@ void UMainHUDWidget::UpdateProgressBar(EStateName StateName, double CurrentValue
 	}
 }
 //-----------------------------------------------------------------------------------------------------------
+void UMainHUDWidget::DragDropOperation(UInventoryComponent* StorageComponent, int Index, bool bIsDrop)
+{
+	if (bIsDrop)
+	{
+		DropStorage = StorageComponent;
+		DropIndex = Index;
+		if (DragStorage && DropStorage)
+		{
+			TArray<FItemInvStruct> LocalDragItemStorage = DragStorage->GetInventory();
+			TArray<FItemInvStruct> LocalDropItemStorage = DropStorage->GetInventory();
+			DragStorage->SetItemFromIndex(LocalDropItemStorage[DropIndex], DropIndex);
+			DropStorage->SetItemFromIndex(LocalDragItemStorage[DragIndex], DragIndex);
+			WBPInventory->UpdateInventoryWidget();
+		}
+	}
+	else
+	{
+		DragStorage = StorageComponent;
+		DragIndex = Index;
+	}
+}

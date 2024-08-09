@@ -62,3 +62,8 @@ bool UInventoryComponent::PickUpItem(FItemInvStruct& ItemStruct)
 	}
 	return false;
 }
+//-----------------------------------------------------------------------------------------------------------
+void UInventoryComponent::SetItemFromIndex(FItemInvStruct Item, int Index)
+{
+	Inventory[Index] = Item;
+}

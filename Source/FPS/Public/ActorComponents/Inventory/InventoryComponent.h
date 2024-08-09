@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Interfaces/DragDropInterface.h"
 #include "InventoryComponent.generated.h"
 //-----------------------------------------------------------------------------------------------------------
 class AItemMaster;
@@ -24,13 +25,14 @@ struct FItemInvStruct
 };
 //-----------------------------------------------------------------------------------------------------------
 UCLASS(Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class FPS_API UInventoryComponent : public UActorComponent
+class FPS_API UInventoryComponent : public UActorComponent, public IDragDropInterface
 {
 	GENERATED_BODY()
 
 public:	
 	UInventoryComponent();
 	TArray<FItemInvStruct> GetInventory();
+	void SetItemFromIndex(FItemInvStruct Item, int Index);
 	bool PickUpItem(FItemInvStruct& ItemStruct);
 	UPROPERTY(BlueprintAssignable, Category = "Inventory Component") FInitInvWidget InitInvWidget;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Inventory Component") int InvMaxSlots;

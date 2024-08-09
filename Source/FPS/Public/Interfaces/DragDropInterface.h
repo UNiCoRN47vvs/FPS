@@ -16,6 +16,6 @@ class FPS_API IDragDropInterface
 {
 	GENERATED_BODY()
 public:
-	virtual void DragDropOperation(UInventoryComponent* StorageComponent, int Index, bool bIsDrop) = 0;
+
 };
 //-----------------------------------------------------------------------------------------------------------
