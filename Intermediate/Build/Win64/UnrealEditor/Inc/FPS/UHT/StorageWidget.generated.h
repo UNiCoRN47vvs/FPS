@@ -9,10 +9,16 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UStorageComponent;
 #ifdef FPS_StorageWidget_generated_h
 #error "StorageWidget.generated.h already included, missing '#pragma once' in StorageWidget.h"
 #endif
 #define FPS_StorageWidget_generated_h
+
+#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_StorageWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execInitStorageWidget); \
+	DECLARE_FUNCTION(execUpdateInventoryWidget);
+
 
 #define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_StorageWidget_h_15_INCLASS_NO_PURE_DECLS \
 private: \
@@ -20,7 +26,8 @@ private: \
 	friend struct Z_Construct_UClass_UStorageWidget_Statics; \
 public: \
 	DECLARE_CLASS(UStorageWidget, UUserWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/FPS"), NO_API) \
-	DECLARE_SERIALIZER(UStorageWidget)
+	DECLARE_SERIALIZER(UStorageWidget) \
+	virtual UObject* _getUObject() const override { return const_cast<UStorageWidget*>(this); }
 
 
 #define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_StorageWidget_h_15_ENHANCED_CONSTRUCTORS \
@@ -41,6 +48,7 @@ public: \
 #define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_StorageWidget_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_StorageWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_StorageWidget_h_15_INCLASS_NO_PURE_DECLS \
 	FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_StorageWidget_h_15_ENHANCED_CONSTRUCTORS \
 private: \

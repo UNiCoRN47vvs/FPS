@@ -9,29 +9,25 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class UStorageComponent;
 #ifdef FPS_InventoryWidget_generated_h
 #error "InventoryWidget.generated.h already included, missing '#pragma once' in InventoryWidget.h"
 #endif
 #define FPS_InventoryWidget_generated_h
 
-#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execHideInventory); \
-	DECLARE_FUNCTION(execInitStorageWidget); \
-	DECLARE_FUNCTION(execUpdateInventoryWidget);
+#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_9_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execHideInventory);
 
 
-#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_9_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUInventoryWidget(); \
 	friend struct Z_Construct_UClass_UInventoryWidget_Statics; \
 public: \
-	DECLARE_CLASS(UInventoryWidget, UUserWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/FPS"), NO_API) \
-	DECLARE_SERIALIZER(UInventoryWidget) \
-	virtual UObject* _getUObject() const override { return const_cast<UInventoryWidget*>(this); }
+	DECLARE_CLASS(UInventoryWidget, UStorageWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/FPS"), NO_API) \
+	DECLARE_SERIALIZER(UInventoryWidget)
 
 
-#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_9_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UInventoryWidget(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -45,13 +41,13 @@ public: \
 	NO_API virtual ~UInventoryWidget();
 
 
-#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_12_PROLOG
-#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_15_GENERATED_BODY \
+#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_6_PROLOG
+#define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_9_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_9_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_9_INCLASS_NO_PURE_DECLS \
+	FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_9_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
