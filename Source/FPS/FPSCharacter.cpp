@@ -16,6 +16,7 @@
 #include "ActorComponents/State/HealthStaminaComponent.h"
 #include "ActorComponents/Interact/InteractComponent.h"
 #include "ActorComponents/Inventory/InventoryComponent.h"
+#include "ActorComponents/Chest/ChestComponent.h"
 #include "Interfaces/ItemInteract.h"
 //-----------------------------------------------------------------------------------------------------------
 AFPSCharacter::AFPSCharacter()
@@ -116,6 +117,10 @@ UCameraComponent* AFPSCharacter::GetCameraComponent()
 UInventoryComponent* AFPSCharacter::GetInventoryComponent()
 {
 	return FindComponentByClass<UInventoryComponent>();
+}
+UChestComponent* AFPSCharacter::GetChestComponent()
+{
+	return FindComponentByClass<UChestComponent>();
 }
 //-----------------------------------------------------------------------------------------------------------
 //Sprint

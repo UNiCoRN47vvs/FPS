@@ -89,6 +89,12 @@
     <ClCompile Include="..\..\Source\FPS\Private\ActorComponents\StorageComponent.cpp">
       <Filter>Source\FPS\Private\ActorComponents</Filter>
     </ClCompile>
+    <Filter Include="Source\FPS\Private\ActorComponents\Chest">
+      <UniqueIdentifier>{D5BADA98-13D3-38D3-BE30-8FA0BF38F2A5}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\ActorComponents\Chest\ChestComponent.cpp">
+      <Filter>Source\FPS\Private\ActorComponents\Chest</Filter>
+    </ClCompile>
     <Filter Include="Source\FPS\Private\ActorComponents\Interact">
       <UniqueIdentifier>{2791B333-581E-3AE4-95C1-C4C5C0928B10}</UniqueIdentifier>
     </Filter>
@@ -158,6 +164,9 @@
     <Filter Include="Source\FPS\Private\Widgets\Inventory">
       <UniqueIdentifier>{07AC7D9C-A4AA-3497-89A6-3F410F75F207}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\Widgets\Inventory\ChestWidget.cpp">
+      <Filter>Source\FPS\Private\Widgets\Inventory</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\Widgets\Inventory\InventorySlotWidget.cpp">
       <Filter>Source\FPS\Private\Widgets\Inventory</Filter>
     </ClCompile>
@@ -187,6 +196,12 @@
     </Filter>
     <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\StorageComponent.h">
       <Filter>Source\FPS\Public\ActorComponents</Filter>
+    </ClInclude>
+    <Filter Include="Source\FPS\Public\ActorComponents\Chest">
+      <UniqueIdentifier>{CCED7D0F-BCDE-3E2F-9151-3DE3D2CFF823}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\Chest\ChestComponent.h">
+      <Filter>Source\FPS\Public\ActorComponents\Chest</Filter>
     </ClInclude>
     <Filter Include="Source\FPS\Public\ActorComponents\Interact">
       <UniqueIdentifier>{9D554190-43F9-31C3-ABD4-707EE7154F94}</UniqueIdentifier>
@@ -257,6 +272,9 @@
     <Filter Include="Source\FPS\Public\Widgets\Inventory">
       <UniqueIdentifier>{7D9E41E9-75E2-34F3-A224-37969EFB3CC8}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\Widgets\Inventory\ChestWidget.h">
+      <Filter>Source\FPS\Public\Widgets\Inventory</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\Inventory\InventorySlotWidget.h">
       <Filter>Source\FPS\Public\Widgets\Inventory</Filter>
     </ClInclude>

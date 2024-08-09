@@ -292,6 +292,9 @@
     <ClCompile Include="..\..\Source\FPS\Private\ActorComponents\StorageComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\FPS\Private\ActorComponents\Chest\ChestComponent.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\ActorComponents\Interact\InteractComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -331,6 +334,9 @@
     <ClCompile Include="..\..\Source\FPS\Private\Widgets\Interact\InfoInteractWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\FPS\Private\Widgets\Inventory\ChestWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\Widgets\Inventory\InventorySlotWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -347,6 +353,7 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\StorageComponent.h"/>
+    <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\Chest\ChestComponent.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\Interact\InteractComponent.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\Inventory\InventoryComponent.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\State\HealthStaminaComponent.h"/>
@@ -360,6 +367,7 @@
     <ClInclude Include="..\..\Source\FPS\Public\Items\Supplies\SuppliesMaster.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Items\Weapons\WeaponMaster.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\Interact\InfoInteractWidget.h"/>
+    <ClInclude Include="..\..\Source\FPS\Public\Widgets\Inventory\ChestWidget.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\Inventory\InventorySlotWidget.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\Inventory\InventoryWidget.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\Inventory\StorageWidget.h"/>

@@ -6,6 +6,7 @@
 #include "Interfaces/PlayerInteract.h"
 #include "FPSCharacter.generated.h"
 //-----------------------------------------------------------------------------------------------------------
+class AFPSPlayerController;
 class UInputComponent;
 class USkeletalMeshComponent;
 class UCameraComponent;
@@ -14,7 +15,7 @@ class UInputMappingContext;
 class UHealthStaminaComponent;
 class UInteractComponent;
 class UInventoryComponent;
-class AFPSPlayerController;
+class UChestComponent;
 struct FInputActionValue;
 //-----------------------------------------------------------------------------------------------------------
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FChangeSprint, bool, bStart);
@@ -35,6 +36,7 @@ public:
 	UInteractComponent* GetInteractComponent();
 	UCameraComponent* GetCameraComponent();
 	UInventoryComponent* GetInventoryComponent();
+	UChestComponent* GetChestComponent();
 
 	void StopSprint();
 	void ShowHideInventory();
