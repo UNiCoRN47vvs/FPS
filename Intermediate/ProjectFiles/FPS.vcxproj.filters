@@ -86,6 +86,9 @@
     <Filter Include="Source\FPS\Private\ActorComponents">
       <UniqueIdentifier>{DC4F044C-2C42-3D50-B3F8-E5A73CA17F87}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\FPS\Private\ActorComponents\StorageComponent.cpp">
+      <Filter>Source\FPS\Private\ActorComponents</Filter>
+    </ClCompile>
     <Filter Include="Source\FPS\Private\ActorComponents\Interact">
       <UniqueIdentifier>{2791B333-581E-3AE4-95C1-C4C5C0928B10}</UniqueIdentifier>
     </Filter>
@@ -161,6 +164,9 @@
     <ClCompile Include="..\..\Source\FPS\Private\Widgets\Inventory\InventoryWidget.cpp">
       <Filter>Source\FPS\Private\Widgets\Inventory</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\FPS\Private\Widgets\Inventory\StorageWidget.cpp">
+      <Filter>Source\FPS\Private\Widgets\Inventory</Filter>
+    </ClCompile>
     <Filter Include="Source\FPS\Private\Widgets\MainHUD">
       <UniqueIdentifier>{7204B9C3-AA88-31D2-A1FD-7C9373557BD8}</UniqueIdentifier>
     </Filter>
@@ -179,6 +185,9 @@
     <Filter Include="Source\FPS\Public\ActorComponents">
       <UniqueIdentifier>{59AAA302-64DF-32C6-8B82-99DA5CB8D5BD}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\StorageComponent.h">
+      <Filter>Source\FPS\Public\ActorComponents</Filter>
+    </ClInclude>
     <Filter Include="Source\FPS\Public\ActorComponents\Interact">
       <UniqueIdentifier>{9D554190-43F9-31C3-ABD4-707EE7154F94}</UniqueIdentifier>
     </Filter>
@@ -252,6 +261,9 @@
       <Filter>Source\FPS\Public\Widgets\Inventory</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\Inventory\InventoryWidget.h">
+      <Filter>Source\FPS\Public\Widgets\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\FPS\Public\Widgets\Inventory\StorageWidget.h">
       <Filter>Source\FPS\Public\Widgets\Inventory</Filter>
     </ClInclude>
     <Filter Include="Source\FPS\Public\Widgets\MainHUD">

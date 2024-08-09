@@ -289,6 +289,9 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\FPS\TP_WeaponComponent.h"/>
+    <ClCompile Include="..\..\Source\FPS\Private\ActorComponents\StorageComponent.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\ActorComponents\Interact\InteractComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -334,12 +337,16 @@
     <ClCompile Include="..\..\Source\FPS\Private\Widgets\Inventory\InventoryWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\FPS\Private\Widgets\Inventory\StorageWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\Widgets\MainHUD\MainHUDWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\FPS\Private\Widgets\ProgressBar\ProgressBarWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\StorageComponent.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\Interact\InteractComponent.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\Inventory\InventoryComponent.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\ActorComponents\State\HealthStaminaComponent.h"/>
@@ -355,6 +362,7 @@
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\Interact\InfoInteractWidget.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\Inventory\InventorySlotWidget.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\Inventory\InventoryWidget.h"/>
+    <ClInclude Include="..\..\Source\FPS\Public\Widgets\Inventory\StorageWidget.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\MainHUD\MainHUDWidget.h"/>
     <ClInclude Include="..\..\Source\FPS\Public\Widgets\ProgressBar\ProgressBarWidget.h"/>
   </ItemGroup>

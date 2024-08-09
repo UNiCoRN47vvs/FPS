@@ -42,7 +42,7 @@ void UMainHUDWidget::UpdateProgressBar(EStateName StateName, double CurrentValue
 	}
 }
 //-----------------------------------------------------------------------------------------------------------
-void UMainHUDWidget::DragDropOperation(UInventoryComponent* StorageComponent, int Index, bool bIsDrop)
+void UMainHUDWidget::DragDropOperation(UStorageComponent* StorageComponent, int Index, bool bIsDrop)
 {
 	if (bIsDrop)
 	{
@@ -50,8 +50,8 @@ void UMainHUDWidget::DragDropOperation(UInventoryComponent* StorageComponent, in
 		DropIndex = Index;
 		if (DragStorage && DropStorage)
 		{
-			TArray<FItemInvStruct> LocalDragItemStorage = DragStorage->GetInventory();
-			TArray<FItemInvStruct> LocalDropItemStorage = DropStorage->GetInventory();
+			TArray<FItemInvStruct> LocalDragItemStorage = DragStorage->GetStorage();
+			TArray<FItemInvStruct> LocalDropItemStorage = DropStorage->GetStorage();
 			DragStorage->SetItemFromIndex(LocalDropItemStorage[DropIndex], DragIndex);
 			DropStorage->SetItemFromIndex(LocalDragItemStorage[DragIndex], DropIndex);
 			WBPInventory->UpdateInventoryWidget();

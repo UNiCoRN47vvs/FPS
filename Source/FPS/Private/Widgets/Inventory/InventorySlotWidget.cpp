@@ -38,7 +38,10 @@ void UInventorySlotWidget::UpdateInvSlot(TSoftObjectPtr<UTexture2D> Icon, int Co
 //-----------------------------------------------------------------------------------------------------------
 void UInventorySlotWidget::NativeOnDragDetected(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent, UDragDropOperation*& OutOperation)
 {
+	if (StorageComponent && !StorageComponent->GetStorage()[Index].bOccupied)
+		return;
 	Super::NativeOnDragDetected(InGeometry, InMouseEvent, OutOperation);
+
 	DragDropFunc(false);
 }
 //-----------------------------------------------------------------------------------------------------------

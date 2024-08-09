@@ -4,7 +4,7 @@
 #include "UObject/Interface.h"
 #include "StorageInterface.generated.h"
 //-----------------------------------------------------------------------------------------------------------
-class UInventoryComponent;
+class UStorageComponent;
 //-----------------------------------------------------------------------------------------------------------
 UINTERFACE(MinimalAPI)
 class UStorageInterface : public UInterface
@@ -17,6 +17,6 @@ class FPS_API IStorageInterface
 	GENERATED_BODY()
 
 public:
-	virtual UInventoryComponent* GetStorageComponent() = 0;
+	virtual UStorageComponent* GetStorageComponent() = 0;
 };
 //-----------------------------------------------------------------------------------------------------------

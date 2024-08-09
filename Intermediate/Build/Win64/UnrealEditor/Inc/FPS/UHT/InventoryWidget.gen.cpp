@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodeInventoryWidget() {}
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 FPS_API UClass* Z_Construct_UClass_UInventoryWidget();
 FPS_API UClass* Z_Construct_UClass_UInventoryWidget_NoRegister();
+FPS_API UClass* Z_Construct_UClass_UStorageComponent_NoRegister();
 FPS_API UClass* Z_Construct_UClass_UStorageInterface_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UUniformGridPanel_NoRegister();
@@ -50,34 +51,50 @@ DEFINE_FUNCTION(UInventoryWidget::execHideInventory)
 }
 // End Class UInventoryWidget Function HideInventory
 
-// Begin Class UInventoryWidget Function InitInventoryWidget
-struct Z_Construct_UFunction_UInventoryWidget_InitInventoryWidget_Statics
+// Begin Class UInventoryWidget Function InitStorageWidget
+struct Z_Construct_UFunction_UInventoryWidget_InitStorageWidget_Statics
 {
+	struct InventoryWidget_eventInitStorageWidget_Parms
+	{
+		UStorageComponent* StorageComponent;
+	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Public/Widgets/Inventory/InventoryWidget.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StorageComponent_MetaData[] = {
+		{ "EditInline", "true" },
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_StorageComponent;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInventoryWidget_InitInventoryWidget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UInventoryWidget, nullptr, "InitInventoryWidget", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInventoryWidget_InitInventoryWidget_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInventoryWidget_InitInventoryWidget_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_UInventoryWidget_InitInventoryWidget()
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UInventoryWidget_InitStorageWidget_Statics::NewProp_StorageComponent = { "StorageComponent", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InventoryWidget_eventInitStorageWidget_Parms, StorageComponent), Z_Construct_UClass_UStorageComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StorageComponent_MetaData), NewProp_StorageComponent_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UInventoryWidget_InitStorageWidget_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInventoryWidget_InitStorageWidget_Statics::NewProp_StorageComponent,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UInventoryWidget_InitStorageWidget_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInventoryWidget_InitStorageWidget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UInventoryWidget, nullptr, "InitStorageWidget", nullptr, nullptr, Z_Construct_UFunction_UInventoryWidget_InitStorageWidget_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UInventoryWidget_InitStorageWidget_Statics::PropPointers), sizeof(Z_Construct_UFunction_UInventoryWidget_InitStorageWidget_Statics::InventoryWidget_eventInitStorageWidget_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInventoryWidget_InitStorageWidget_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInventoryWidget_InitStorageWidget_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UInventoryWidget_InitStorageWidget_Statics::InventoryWidget_eventInitStorageWidget_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UInventoryWidget_InitStorageWidget()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UInventoryWidget_InitInventoryWidget_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UInventoryWidget_InitStorageWidget_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(UInventoryWidget::execInitInventoryWidget)
+DEFINE_FUNCTION(UInventoryWidget::execInitStorageWidget)
 {
+	P_GET_OBJECT(UStorageComponent,Z_Param_StorageComponent);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->InitInventoryWidget();
+	P_THIS->InitStorageWidget(Z_Param_StorageComponent);
 	P_NATIVE_END;
 }
-// End Class UInventoryWidget Function InitInventoryWidget
+// End Class UInventoryWidget Function InitStorageWidget
 
 // Begin Class UInventoryWidget Function UpdateInventoryWidget
 struct Z_Construct_UFunction_UInventoryWidget_UpdateInventoryWidget_Statics
@@ -114,7 +131,7 @@ void UInventoryWidget::StaticRegisterNativesUInventoryWidget()
 	UClass* Class = UInventoryWidget::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "HideInventory", &UInventoryWidget::execHideInventory },
-		{ "InitInventoryWidget", &UInventoryWidget::execInitInventoryWidget },
+		{ "InitStorageWidget", &UInventoryWidget::execInitStorageWidget },
 		{ "UpdateInventoryWidget", &UInventoryWidget::execUpdateInventoryWidget },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -158,7 +175,7 @@ struct Z_Construct_UClass_UInventoryWidget_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UInventoryWidget_HideInventory, "HideInventory" }, // 1254524617
-		{ &Z_Construct_UFunction_UInventoryWidget_InitInventoryWidget, "InitInventoryWidget" }, // 3087393316
+		{ &Z_Construct_UFunction_UInventoryWidget_InitStorageWidget, "InitStorageWidget" }, // 356756927
 		{ &Z_Construct_UFunction_UInventoryWidget_UpdateInventoryWidget, "UpdateInventoryWidget" }, // 3630201477
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -221,10 +238,10 @@ UInventoryWidget::~UInventoryWidget() {}
 struct Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UInventoryWidget, UInventoryWidget::StaticClass, TEXT("UInventoryWidget"), &Z_Registration_Info_UClass_UInventoryWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInventoryWidget), 1065282660U) },
+		{ Z_Construct_UClass_UInventoryWidget, UInventoryWidget::StaticClass, TEXT("UInventoryWidget"), &Z_Registration_Info_UClass_UInventoryWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInventoryWidget), 2670955533U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_2745075183(TEXT("/Script/FPS"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_3430080919(TEXT("/Script/FPS"),
 	Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

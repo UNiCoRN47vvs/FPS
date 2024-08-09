@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UStorageComponent;
 #ifdef FPS_InventoryWidget_generated_h
 #error "InventoryWidget.generated.h already included, missing '#pragma once' in InventoryWidget.h"
 #endif
@@ -16,7 +17,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define FID_Project_FPS_Source_FPS_Public_Widgets_Inventory_InventoryWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execHideInventory); \
-	DECLARE_FUNCTION(execInitInventoryWidget); \
+	DECLARE_FUNCTION(execInitStorageWidget); \
 	DECLARE_FUNCTION(execUpdateInventoryWidget);
 
 

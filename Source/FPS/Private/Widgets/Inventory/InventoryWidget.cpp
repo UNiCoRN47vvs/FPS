@@ -14,27 +14,20 @@ void UInventoryWidget::NativeConstruct()
 		if(!PlayerCharacter)
 			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InventoryWidget, PlayerCharacter = nullptr!")));
 		else
-			PlayerCharacter->GetInventoryComponent()->InitInvWidget.AddDynamic(this, &UInventoryWidget::InitInventoryWidget);
+			PlayerCharacter->GetInventoryComponent()->InitInvWidget.AddDynamic(this, &UInventoryWidget::InitStorageWidget);
 	}
 	else
-		PlayerCharacter->GetInventoryComponent()->InitInvWidget.AddDynamic(this, &UInventoryWidget::InitInventoryWidget);
+		PlayerCharacter->GetInventoryComponent()->InitInvWidget.AddDynamic(this, &UInventoryWidget::InitStorageWidget);
 
 	ButtonClose->OnClicked.AddDynamic(this, &UInventoryWidget::HideInventory);
 }
 //-----------------------------------------------------------------------------------------------------------
-void UInventoryWidget::InitInventoryWidget()
+void UInventoryWidget::InitStorageWidget(UStorageComponent* StorageComponent)
 {
-	if (!PlayerCharacter)
+	if (StorageComponent)
 	{
-		PlayerCharacter = Cast<AFPSCharacter>(GetOwningPlayer()->GetPawn());
-		if(!PlayerCharacter)
-			GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InventoryWidget, PlayerCharacter = nullptr!")));
-	}
-
-	if (PlayerCharacter)
-	{
-		int InvSlotsPerRow = PlayerCharacter->GetInventoryComponent()->InvSlotsPerRow;
-		TArray<FItemInvStruct> Inventory = PlayerCharacter->GetInventoryComponent()->GetInventory();
+		int InvSlotsPerRow = StorageComponent->InvSlotsPerRow;
+		TArray<FItemInvStruct> Inventory = StorageComponent->GetStorage();
 		for (int i = 0; i < Inventory.Num(); ++i)
 		{
 			int Row    = i / InvSlotsPerRow;
@@ -48,7 +41,7 @@ void UInventoryWidget::InitInventoryWidget()
 			UniformGridPanel->AddChildToUniformGrid(LocalSlotWidget, Row, Column);
 		}
 	}else
-		GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InventoryWidget, PlayerCharacter = nullptr!")));
+		GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InventoryWidget, StorageComponent = nullptr!")));
 }
 //-----------------------------------------------------------------------------------------------------------
 void UInventoryWidget::HideInventory()
@@ -71,7 +64,7 @@ void UInventoryWidget::UpdateInventoryWidget()
 			return GEngine->AddOnScreenDebugMessage(0, 5, FColor::Cyan, FString(TEXT("InventoryWidget, PlayerCharacter = nullptr!")));
 	}
 
-	TArray<FItemInvStruct> Inventory = PlayerCharacter->GetInventoryComponent()->GetInventory();
+	TArray<FItemInvStruct> Inventory = PlayerCharacter->GetInventoryComponent()->GetStorage();
 	for (int i = 0; i < UniformGridPanel->GetAllChildren().Num(); ++i)
 	{
 		IInventorySlot* LocalSlotInterface = Cast<IInventorySlot>(UniformGridPanel->GetAllChildren()[i]);
@@ -82,7 +75,7 @@ void UInventoryWidget::UpdateInventoryWidget()
 	}
 }
 //-----------------------------------------------------------------------------------------------------------
-UInventoryComponent* UInventoryWidget::GetStorageComponent()
+UStorageComponent* UInventoryWidget::GetStorageComponent()
 {
 	if (!PlayerCharacter)
 	{

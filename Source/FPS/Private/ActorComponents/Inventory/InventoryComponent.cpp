@@ -5,26 +5,14 @@ UInventoryComponent::UInventoryComponent()
 	PrimaryComponentTick.bCanEverTick = true;
 }
 //-----------------------------------------------------------------------------------------------------------
-//Getter
-TArray<FItemInvStruct> UInventoryComponent::GetInventory()
-{
-	return Inventory;
-}
-//-----------------------------------------------------------------------------------------------------------
 void UInventoryComponent::BeginPlay()
 {
 	Super::BeginPlay();
-	for (int i = 0; i < InvMaxSlots; i++)
-	{
-		Inventory.Add(FItemInvStruct{});
-	}
-
-	InitInvWidget.Broadcast();
 }
 //-----------------------------------------------------------------------------------------------------------
 bool UInventoryComponent::PickUpItem(FItemInvStruct& ItemStruct)
 {
-	for (auto& item : Inventory)
+	for (auto& item : Storage)
 	{
 		if (item.bOccupied)
 		{
@@ -63,7 +51,3 @@ bool UInventoryComponent::PickUpItem(FItemInvStruct& ItemStruct)
 	return false;
 }
 //-----------------------------------------------------------------------------------------------------------
-void UInventoryComponent::SetItemFromIndex(FItemInvStruct Item, int Index)
-{
-	Inventory[Index] = Item;
-}
