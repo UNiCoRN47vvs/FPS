@@ -1,0 +1,2 @@
+#include "Struct/StatGradeData.h"
+
